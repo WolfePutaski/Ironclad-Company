@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>New project</name>
+    <description></description>
+    <version>1.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <app-id></app-id>
+    <unique-id>3k8y8jenijj4j</unique-id>
+    <saved-with-version>23900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>640</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">No</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Hide address bar">No</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use iOS retina display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Player" sid="220558497765610">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="Ammo type" name="CurrentAmmo" sid="742164905055392" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="8Direction" sid="760430328215388">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="205313325434231">
+                    <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="767460374984555">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="290599224167300" speed="5">
+                    <frame duration="1" hotspotX="0.0078125" hotspotY="0.476563" original-source="C:\Users\NeoGranzon\Desktop\Project 1-1 Ironclad Company\Tank1 Cannon.png">
+                        <image-point name="ShootPoint" x="1.14844" y="0.507813" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground" sid="602266712590892">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Mouse" sid="979485201831938">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Bullet" sid="114875285865782">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="103133900200212">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="181181960113201">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="725009991421475" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="445983356119229">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Enemy" sid="434907279022658">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Health" sid="666120357831412" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="780941091204403" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.510204" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="550272085234283">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Player2" sid="725611394083928">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="8Direction" sid="910437881959782">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="971746638502596">
+                    <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="437142154845466">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="703951322025025" speed="5">
+                    <frame duration="1" hotspotX="0.536842" hotspotY="0.523077" original-source="C:\Users\NeoGranzon\Desktop\Project 1-1 Ironclad Company\Tank1.png">
+                        <collision-poly>
+                            <point x="0.326316" y="0.0153846" />
+                            <point x="0.631579" y="0" />
+                            <point x="0.842105" y="0.169231" />
+                            <point x="0.905263" y="1" />
+                            <point x="0.357895" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.526316" hotspotY="0.523077" original-source="C:\Users\NeoGranzon\Desktop\Project 1-1 Ironclad Company\Tank1.png">
+                        <collision-poly>
+                            <point x="0.336842" y="0.153846" />
+                            <point x="0.631579" y="0.0307692" />
+                            <point x="0.842105" y="0.276923" />
+                            <point x="0.905263" y="1" />
+                            <point x="0.357895" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="245625833376412">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="313412991048781" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="246167499459385">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="201521768200457" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\NeoGranzon\Desktop\Project 1-1 Ironclad Company\Taiga-Asset-Pack_vnitti\PNG\country-platform-files\layers\country-platform-tiles-example.png">
+                        <collision-poly>
+                            <point x="0.460938" y="0.790179" />
+                            <point x="0.5" y="0.513393" />
+                            <point x="0.710938" y="0.495536" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0.513021" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="229874527889791">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="286091487108213" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.198582" original-source="C:\Users\NeoGranzon\Desktop\Project 1-1 Ironclad Company\Taiga-Asset-Pack_vnitti\PNG\country-platform-files\layers\country-platform-forest.png">
+                        <collision-poly>
+                            <point x="0.555556" y="0.035461" />
+                            <point x="0.5" y="0.0496454" />
+                            <point x="0.376543" y="0.113475" />
+                            <point x="0.993827" y="0.198582" />
+                            <point x="0.993827" y="0.992908" />
+                            <point x="0.00617284" y="0.992908" />
+                            <point x="0.00617284" y="0.198582" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite4" sid="380828835118615">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="966049342161237" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\NeoGranzon\Desktop\Project 1-1 Ironclad Company\Taiga-Asset-Pack_vnitti\PNG\country-platform-files\layers\country-platform-back.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="AmmoDisplay" sid="920443705519713">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Sprite5" sid="562666594032465">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="320716888195098" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Slug" sid="785029342208144">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="346780451416135">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="365279796146739">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="361947282312439" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Buckshot" sid="154944009698738">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="758517253100805">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="623887890859975" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.59127" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="HERound" sid="679398093908758">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="353950835742179">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="698798417368981">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="847471908598695" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite6" sid="124476422920253">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="141242598382400">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="366138920373375" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Mouse" uid="16" />
+        <global-instance type="Keyboard" uid="17" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <comment>Always make the player look at the mouse.</comment>
+        <event-block sid="100022652481391">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="247239899665182" type="System" />
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" sid="219125293069358" type="Player">
+                    <param id="0" name="X">Mouse.X(&quot;Game&quot;)</param>
+                    <param id="1" name="Y">Mouse.Y(&quot;Game&quot;)</param>
+                </action>
+                <action id="-8" name="Set angle" sid="700214008600234" type="Player2">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action id="6" name="Set speed" sid="485290682340770" type="Player2">
+                    <param id="0" name="Speed">5</param>
+                </action>
+                <action id="4" name="Set animation" sid="906828273194216" type="Player2">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Set text" sid="716855184334764" type="AmmoDisplay">
+                    <param id="0" name="Text">&quot;Current Ammo Type: &quot;&amp;Player.CurrentAmmo</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Shoot 10 times a second while holding the left mouse button down.  Adjust the bullet angle by a random amount (-4 to +4 degrees) to add some inaccuracy to the firing.</comment>
+        <event-block sid="526253076785874">
+            <conditions>
+                <condition id="2" name="Key is down" sid="393766101721456" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="732445424045225" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="899771835640581" type="Player">
+                    <param id="0" name="Instance variable">CurrentAmmo</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="664292307678132" type="Player">
+                    <param id="0" name="Object">Bullet</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                    <param id="2" name="Image point">&quot;ShootPoint&quot;</param>
+                </action>
+                <action id="-18" name="Rotate clockwise" sid="117081769765802" type="Bullet">
+                    <param id="0" name="Degrees">random(-4, 4)</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Buck Shot</comment>
+        <event-block sid="465949892446752">
+            <conditions>
+                <condition id="2" name="Key is down" sid="514775190408766" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="793301045502494" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="854190093447365" type="Player">
+                    <param id="0" name="Instance variable">CurrentAmmo</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="154475782033229" type="Player">
+                    <param id="0" name="Object">Buckshot</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Slug Round</comment>
+        <event-block sid="621399625829463">
+            <conditions>
+                <condition id="2" name="Key is down" sid="246882817524714" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="737273590992081" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="359597909369189" type="Player">
+                    <param id="0" name="Instance variable">CurrentAmmo</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="214932575045876" type="Player">
+                    <param id="0" name="Object">Slug</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="-18" name="Rotate clockwise" sid="936817891665244" type="Slug">
+                    <param id="0" name="Degrees">random(-4,4)</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>High Explosive</comment>
+        <event-block sid="990219280115056">
+            <conditions>
+                <condition id="2" name="Key is down" sid="179963060358105" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="595151974379757" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="872363385773960" type="Player">
+                    <param id="0" name="Instance variable">CurrentAmmo</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="580769366351519" type="Player">
+                    <param id="0" name="Object">HERound</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="-18" name="Rotate clockwise" sid="340833665915006" type="HERound">
+                    <param id="0" name="Degrees">random(-7,7)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="828802243752766">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="724503654044884" type="HERound">
+                    <param id="0" name="Object">Enemy</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="252300660963297" type="HERound">
+                    <param id="0" name="Object">Sprite6</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="635539575164036" type="HERound" />
+            </actions>
+        </event-block>
+        <event-block sid="134739316537284">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="187611679316898" type="Sprite6">
+                    <param id="0" name="Object">Enemy</param>
+                </condition>
+                <condition id="-10" name="Compare opacity" sid="898885888316986" type="Sprite6">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Opacity">100</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="992768327996467" type="Enemy" />
+            </actions>
+        </event-block>
+        <comment>If a bullet hits an enemy, subtract 10 from its health.  When an enemy runs out of health, destroy it.</comment>
+        <event-block sid="961969052822272">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="694825690012494" type="Bullet">
+                    <param id="0" name="Object">Enemy</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="731928980289199" type="Enemy">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Value">60</param>
+                </action>
+                <action id="-9" name="Destroy" sid="547482396459811" type="Bullet" />
+            </actions>
+        </event-block>
+        <event-block sid="666074552230910">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="999026148533431" type="Slug">
+                    <param id="0" name="Object">Enemy</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="443245915062698" type="Enemy">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Value">40</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="339665599226572">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="143950627464539" type="Buckshot">
+                    <param id="0" name="Object">Enemy</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="885970918716954" type="Enemy">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Value">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="864510475947755">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="482626333792860" type="Enemy">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="246895480707402" type="Enemy" />
+            </actions>
+        </event-block>
+        <comment>Allow WASD as alternate controls to the default arrow keys.</comment>
+        <event-block sid="377242404456882">
+            <conditions>
+                <condition id="2" name="Key is down" sid="183678535318768" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="182835326928110" type="Player">
+                    <param id="0" name="Control">0</param>
+                </action>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="899479143998544" type="Player2">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="708254092703151">
+            <conditions>
+                <condition id="2" name="Key is down" sid="609697891663545" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="945939015795145" type="Player">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="732099680829492" type="Player2">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="950420020510035">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="532435234094413" type="Sprite2">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">-Self.Width / 2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="247623572487330" type="Sprite2">
+                    <param id="0" name="X">Self.X + Self.Width / 2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="134445557666463">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="412042407734369" type="Keyboard">
+                    <param id="0" name="Key">69 (E)</param>
+                </condition>
+                <condition id="-21" name="Is between values" sid="898717853441438" type="System">
+                    <param id="0" name="Value">Player.CurrentAmmo</param>
+                    <param id="1" name="Lower bound">0</param>
+                    <param id="2" name="Upper bound">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="454873652697026" type="Player">
+                    <param id="0" name="Instance variable">CurrentAmmo</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="551198117293585">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="570848680135327" type="Keyboard">
+                    <param id="0" name="Key">81 (Q)</param>
+                </condition>
+                <condition id="-21" name="Is between values" sid="133726760151681" type="System">
+                    <param id="0" name="Value">Player.CurrentAmmo</param>
+                    <param id="1" name="Lower bound">1</param>
+                    <param id="2" name="Upper bound">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="455651462934720" type="Player">
+                    <param id="0" name="Instance variable">CurrentAmmo</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="821432043097956">
+            <conditions />
+            <actions />
+        </event-block>
+        <event-block sid="169570516964051">
+            <conditions>
+                <condition id="2" name="Key is down" sid="149765720090169" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="592052068300237" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="371805745824206" type="Player">
+                    <param id="0" name="Instance variable">CurrentAmmo</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="480326291778344" type="Player">
+                    <param id="0" name="Object">Buckshot</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
