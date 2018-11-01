@@ -1,0 +1,1217 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Peng Build</name>
+    <description></description>
+    <version>1.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <app-id></app-id>
+    <unique-id>3k8y8jenijj4j</unique-id>
+    <saved-with-version>23900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+    </used-behaviors>
+    <used-effects>
+        <effect author="Scirra" id="pixellate">Pixellate</effect>
+    </used-effects>
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1280</width>
+        <height>650</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Pre-Menu</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">No</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Hide address bar">No</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use iOS retina display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Projectile">
+            <object-type name="Buckshot" sid="154944009698738">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="758517253100805">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="623887890859975" speed="5">
+                        <frame duration="1" hotspotX="0.0188679" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Bullet" sid="909435772061175">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="777499952922130">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="403658552514378" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.501767" original-source="D:\IDD\Game Projects\Material\Art\Tank\Bullet.png">
+                            <collision-poly>
+                                <point x="0.390796" y="0.00353357" />
+                                <point x="0.609204" y="0.00353357" />
+                                <point x="0.99922" y="0.498233" />
+                                <point x="0.609984" y="0.996466" />
+                                <point x="0.390016" y="0.996466" />
+                                <point x="0.000780031" y="0.498233" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CannonBall" sid="114875285865782">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="103133900200212">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="181181960113201">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="725009991421475" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="HERound" sid="679398093908758">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="353950835742179">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="698798417368981">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="847471908598695" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Slug" sid="785029342208144">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="346780451416135">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="365279796146739">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="361947282312439" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="VFX">
+            <object-type name="MGMuzzle" sid="721228501615191">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="916736134325124">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="745467039392632" speed="60">
+                        <frame duration="1" hotspotX="0.0344828" hotspotY="0.425926" />
+                        <frame duration="1" hotspotX="-0.210526" hotspotY="0.534884" />
+                        <frame duration="1" hotspotX="-0.0747664" hotspotY="0.534884" />
+                        <frame duration="1" hotspotX="-0.0963855" hotspotY="0.534884" />
+                        <frame duration="1" hotspotX="-0.136986" hotspotY="0.5375" />
+                        <frame duration="1" hotspotX="-0.295082" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="-0.815789" hotspotY="0.481481" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CannonMuzzle" sid="666815644268720">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="864584696057134" speed="24">
+                        <frame duration="1" hotspotX="0.0555556" hotspotY="0.489362" />
+                        <frame duration="1" hotspotX="0.06" hotspotY="0.489362" />
+                        <frame duration="1" hotspotX="0.0612245" hotspotY="0.489362" />
+                        <frame duration="1" hotspotX="0.0568182" hotspotY="0.489362" />
+                        <frame duration="1" hotspotX="0.0487805" hotspotY="0.489362" />
+                        <frame duration="1" hotspotX="0.0454545" hotspotY="0.488889" />
+                        <frame duration="1" hotspotX="0.0585938" hotspotY="0.488281" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="MGHit" sid="380337075890628">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="455730541559462">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="205208803050504" speed="24">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Enemies">
+            <object-type name="GiantFlameSkull" sid="434907279022658">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Finding" sid="705782307549543" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Bullet" sid="627746942760933">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="780941091204403" speed="5">
+                        <frame duration="1" hotspotX="0.383721" hotspotY="0.54955" original-source="C:\Users\NeoGranzon\Desktop\Ironclad-Company-Engine-Proof\skull.gif">
+                            <collision-poly>
+                                <point x="0.0523259" y="0.369369" />
+                                <point x="0.383721" y="0.0900906" />
+                                <point x="0.930233" y="0.0360358" />
+                                <point x="0.674419" y="0.531532" />
+                                <point x="0.651164" y="0.603603" />
+                                <point x="0.383721" y="0.846846" />
+                                <point x="0.0116279" y="0.765766" />
+                                <point x="0.0116279" y="0.531532" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502793" original-source="C:\Users\NeoGranzon\Desktop\Ironclad-Company-Engine-Proof\skull2.png">
+                            <collision-poly>
+                                <point x="0.277344" y="0.396648" />
+                                <point x="0.5" y="0.256983" />
+                                <point x="0.742188" y="0.368715" />
+                                <point x="0.679688" y="0.497207" />
+                                <point x="0.722656" y="0.603352" />
+                                <point x="0.5" y="0.687151" />
+                                <point x="0.25" y="0.642458" />
+                                <point x="0.25" y="0.497207" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ShieldGoblin" sid="652695716419334">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="857320052962861">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="871226042044512" speed="6">
+                        <frame duration="1" hotspotX="0.523256" hotspotY="0.672269" />
+                        <frame duration="1" hotspotX="0.46875" hotspotY="0.647059" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="FlameSkull" sid="462371307145327">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Finding" sid="663363109591075" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Bullet" sid="267846646682649">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="943103966093989" speed="5">
+                        <frame duration="1" hotspotX="0.383721" hotspotY="0.54955" original-source="C:\Users\NeoGranzon\Desktop\Ironclad-Company-Engine-Proof\skull.gif">
+                            <collision-poly>
+                                <point x="0.0523259" y="0.369369" />
+                                <point x="0.383721" y="0.0900906" />
+                                <point x="0.930233" y="0.0360358" />
+                                <point x="0.674419" y="0.531532" />
+                                <point x="0.651164" y="0.603603" />
+                                <point x="0.383721" y="0.846846" />
+                                <point x="0.0116279" y="0.765766" />
+                                <point x="0.0116279" y="0.531532" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502793" original-source="C:\Users\NeoGranzon\Desktop\Ironclad-Company-Engine-Proof\skull2.png">
+                            <collision-poly>
+                                <point x="0.277344" y="0.396648" />
+                                <point x="0.5" y="0.256983" />
+                                <point x="0.742188" y="0.368715" />
+                                <point x="0.679688" y="0.497207" />
+                                <point x="0.722656" y="0.603352" />
+                                <point x="0.5" y="0.687151" />
+                                <point x="0.25" y="0.642458" />
+                                <point x="0.25" y="0.497207" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Giant" sid="207348825192732">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="831659529994797">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="918685379538276" speed="4">
+                        <frame duration="1" hotspotX="0.473214" hotspotY="0.477012" />
+                        <frame duration="1" hotspotX="0.467153" hotspotY="0.48538" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GiantBrainBoss" sid="995754494618805">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="OnCharging" sid="953794892445869" type="number" />
+                    <instance-variable name="OnFiring" sid="140583342609737" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Sine" sid="596391007200767">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                    <behavior-type name="Sine2" sid="957034473886043">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="954997548621117" speed="6">
+                        <frame duration="1" hotspotX="0.495512" hotspotY="0.409506" />
+                        <frame duration="1" hotspotX="0.495512" hotspotY="0.416357" />
+                    </animation>
+                    <animation framecount="5" loop="1" name="ChargingFire" pingpong="0" repeatcount="1" repeatto="0" sid="743511545803781" speed="12">
+                        <frame duration="1" hotspotX="0.495528" hotspotY="0.409836" />
+                        <frame duration="1" hotspotX="0.500885" hotspotY="0.409836" />
+                        <frame duration="1" hotspotX="0.500885" hotspotY="0.42246" />
+                        <frame duration="1" hotspotX="0.497364" hotspotY="0.42246" />
+                        <frame duration="1" hotspotX="0.497364" hotspotY="0.42246" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BrainFire" sid="776436767072501">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="914340949091274">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="9" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="877373140193773" speed="24">
+                        <frame duration="1" hotspotX="0.498208" hotspotY="0.591398" />
+                        <frame duration="1" hotspotX="0.503546" hotspotY="0.591398" />
+                        <frame duration="1" hotspotX="0.493007" hotspotY="0.598639" />
+                        <frame duration="1" hotspotX="0.527273" hotspotY="0.55873" />
+                        <frame duration="1" hotspotX="0.547945" hotspotY="0.553623" />
+                        <frame duration="1" hotspotX="0.527273" hotspotY="0.55873" />
+                        <frame duration="1" hotspotX="0.493007" hotspotY="0.598639" />
+                        <frame duration="1" hotspotX="0.503546" hotspotY="0.591398" />
+                        <frame duration="1" hotspotX="0.498208" hotspotY="0.591398" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ChargingLaser" sid="394673463120497">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="705236459525183">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="777919881069144" speed="5">
+                        <frame duration="1" hotspotX="0.500861" hotspotY="0.503759" original-source="D:\IDD\Game Projects\Material\Art\Enemies\brain_angry_beam.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="AmmoType">
+            <object-type name="SlugUI" sid="424697774104010">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="180803389360358" speed="5">
+                        <frame duration="1" hotspotX="0.503311" hotspotY="0.479167" original-source="D:\IDD\Game Projects\Material\Art\Tank\Slug_cannon_icon.png">
+                            <collision-poly>
+                                <point x="0.00662252" y="0.0885417" />
+                                <point x="0.503311" y="0.00520833" />
+                                <point x="0.993378" y="0.09375" />
+                                <point x="0.993378" y="0.479167" />
+                                <point x="0.92053" y="0.807292" />
+                                <point x="0.503311" y="0.994792" />
+                                <point x="0.0860927" y="0.807292" />
+                                <point x="0.00662252" y="0.479167" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Standard" sid="694116058725091">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="124780026348026" speed="5">
+                        <frame duration="1" hotspotX="0.503311" hotspotY="0.479167" original-source="D:\IDD\Game Projects\Material\Art\Tank\Standard_cannon_icon.png">
+                            <collision-poly>
+                                <point x="0.00662252" y="0.0885417" />
+                                <point x="0.503311" y="0.00520833" />
+                                <point x="0.993378" y="0.09375" />
+                                <point x="0.993378" y="0.479167" />
+                                <point x="0.92053" y="0.807292" />
+                                <point x="0.503311" y="0.994792" />
+                                <point x="0.0860927" y="0.807292" />
+                                <point x="0.00662252" y="0.479167" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Sprite" sid="457773056220679">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="906336169814101" speed="5">
+                        <frame duration="1" hotspotX="0.503311" hotspotY="0.479167" original-source="D:\IDD\Game Projects\Material\Art\Tank\Grapeshot_cannon_icon.png">
+                            <collision-poly>
+                                <point x="0.00662252" y="0.0885417" />
+                                <point x="0.503311" y="0.00520833" />
+                                <point x="0.993378" y="0.09375" />
+                                <point x="0.993378" y="0.479167" />
+                                <point x="0.92053" y="0.807292" />
+                                <point x="0.503311" y="0.994792" />
+                                <point x="0.0860927" y="0.807292" />
+                                <point x="0.00662252" y="0.479167" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="HEUI" sid="865317338164402">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="798624072174041" speed="5">
+                        <frame duration="1" hotspotX="0.503311" hotspotY="0.479167" original-source="D:\IDD\Game Projects\Material\Art\Tank\HE_cannon_icon.png">
+                            <collision-poly>
+                                <point x="0.00662252" y="0.0885417" />
+                                <point x="0.503311" y="0.00520833" />
+                                <point x="0.993378" y="0.09375" />
+                                <point x="0.993378" y="0.479167" />
+                                <point x="0.92053" y="0.807292" />
+                                <point x="0.503311" y="0.994792" />
+                                <point x="0.0860927" y="0.807292" />
+                                <point x="0.00662252" y="0.479167" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Debug">
+            <object-type name="AmmoDisplay" sid="920443705519713">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="Heat" sid="341281403282655">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="OverHeat" sid="296603954741320">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="IsSprint" sid="926053646276484">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="Engine" sid="852159397239410">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="CannonIsLoading" sid="680050238685596">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TimeToReload" sid="365509561593620">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="EngineCool" sid="416180775017016">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="Repairing" sid="559905312678066">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="859828836372004">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="Armor" sid="796320016209831">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="144745394027403">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+        </object-folder>
+        <object-folder name="PauseScreen">
+            <object-type name="PAUSED" sid="669609497981792">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="PAUSED2" sid="337613578446245">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TOmenu" sid="898428835915226">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="StartGame" sid="795464569703794">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="StageSelect" sid="948600732540909">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="Save" sid="927142747146024">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="Restart1" sid="142509514530360">
+                <plugin id="Button" />
+            </object-type>
+        </object-folder>
+        <object-folder name="TutorialText">
+            <object-type name="Tutorial1" sid="236558333869352">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-type name="TankCannon" sid="220558497765610">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="Ammo type" name="CurrentAmmo" sid="742164905055392" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="BoundToLayout" sid="205313325434231">
+                    <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="767460374984555">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="488702419800051">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>TankBody</type>
+                <type>TankCannon</type>
+                <type>TankMachinegun</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="290599224167300" speed="5">
+                    <frame duration="1" hotspotX="0.0078125" hotspotY="0.476563" original-source="C:\Users\NeoGranzon\Desktop\Project 1-1 Ironclad Company\Tank1 Cannon.png">
+                        <image-point name="ShootPoint" x="1.14844" y="0.507813" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground" sid="602266712590892">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Mouse" sid="979485201831938">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Health" sid="445983356119229">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Keyboard" sid="550272085234283">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="TankBody" sid="725611394083928">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="8Direction" sid="910437881959782">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="971746638502596">
+                    <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="437142154845466">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>TankBody</type>
+                <type>TankCannon</type>
+                <type>TankMachinegun</type>
+            </container>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="703951322025025" speed="5">
+                    <frame duration="1" hotspotX="0.536842" hotspotY="0.523077" original-source="C:\Users\NeoGranzon\Desktop\Project 1-1 Ironclad Company\Tank1.png">
+                        <collision-poly>
+                            <point x="0.326316" y="0.0153846" />
+                            <point x="0.631579" y="0" />
+                            <point x="0.842105" y="0.169231" />
+                            <point x="0.905263" y="1" />
+                            <point x="0.357895" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.526316" hotspotY="0.523077" original-source="C:\Users\NeoGranzon\Desktop\Project 1-1 Ironclad Company\Tank1.png">
+                        <collision-poly>
+                            <point x="0.336842" y="0.153846" />
+                            <point x="0.631579" y="0.0307692" />
+                            <point x="0.842105" y="0.276923" />
+                            <point x="0.905263" y="1" />
+                            <point x="0.357895" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="246167499459385">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="201521768200457" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\NeoGranzon\Desktop\Project 1-1 Ironclad Company\Taiga-Asset-Pack_vnitti\PNG\country-platform-files\layers\country-platform-tiles-example.png">
+                        <collision-poly>
+                            <point x="0.460938" y="0.790179" />
+                            <point x="0.5" y="0.513393" />
+                            <point x="0.710938" y="0.495536" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0.513021" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="229874527889791">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="286091487108213" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.198582" original-source="C:\Users\NeoGranzon\Desktop\Project 1-1 Ironclad Company\Taiga-Asset-Pack_vnitti\PNG\country-platform-files\layers\country-platform-forest.png">
+                        <collision-poly>
+                            <point x="0.555556" y="0.035461" />
+                            <point x="0.5" y="0.0496454" />
+                            <point x="0.376543" y="0.113475" />
+                            <point x="0.993827" y="0.198582" />
+                            <point x="0.993827" y="0.992908" />
+                            <point x="0.00617284" y="0.992908" />
+                            <point x="0.00617284" y="0.198582" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite4" sid="380828835118615">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="966049342161237" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\NeoGranzon\Desktop\Project 1-1 Ironclad Company\Taiga-Asset-Pack_vnitti\PNG\country-platform-files\layers\country-platform-back.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite5" sid="562666594032465">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="320716888195098" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite6" sid="124476422920253">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="141242598382400">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="366138920373375" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TankMachinegun" sid="589465727360907">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="706572029024596">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>TankBody</type>
+                <type>TankCannon</type>
+                <type>TankMachinegun</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="110099897862965" speed="5">
+                    <frame duration="1" hotspotX="0.162791" hotspotY="0.5" original-source="D:\IDD\Game Projects\Material\Art\Tank\Tank1_MG.png">
+                        <image-point name="Muzzle" x="1" y="0.5" />
+                        <collision-poly>
+                            <point x="0.0465116" y="0.142857" />
+                            <point x="0.488372" y="0.142857" />
+                            <point x="0.906977" y="0.285714" />
+                            <point x="0.976744" y="0.5" />
+                            <point x="0.906977" y="0.714286" />
+                            <point x="0.488372" y="0.928571" />
+                            <point x="0.0465116" y="0.857143" />
+                            <point x="0.0232558" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground2" sid="232815823109036">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="268976198776425">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\NeoGranzon\Desktop\Project 1-1 Ironclad Company\Taiga-Asset-Pack_vnitti\PNG\Background.png" />
+        </object-type>
+        <object-type name="TiledBackground3" sid="597602215722642">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="193643440357863">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\NeoGranzon\Desktop\Project 1-1 Ironclad Company\Taiga-Asset-Pack_vnitti\PNG\Middleground.png" />
+        </object-type>
+        <object-type name="Audio" sid="268797939221507">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Text2" sid="799142065818088">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="GameOver" sid="626479988667781">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text3" sid="727752385975872">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="QuitGame" sid="766187072311303">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Browser" sid="300416987360087">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="Touch" sid="238810464534153">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Load" sid="681809437146593">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Scoreboard" sid="772578074188191">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="Score" sid="492608317031434" type="number" />
+            </instance-variables>
+        </object-type>
+        <object-type name="Sprite7" sid="415565983338994">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="327485343436091" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Stage1" sid="324812072398914">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="ClickToSelectTank" sid="826367486171210">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Sprite8" sid="642073278353073">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="198806287633787" speed="5">
+                    <frame duration="1" hotspotX="0.500657" hotspotY="0.504505" original-source="C:\Users\NeoGranzon\Desktop\logo_prot1.png">
+                        <collision-poly>
+                            <point x="0.021025" y="0.144144" />
+                            <point x="0.499343" y="0.135135" />
+                            <point x="0.977661" y="0.153153" />
+                            <point x="0.959264" y="0.495495" />
+                            <point x="0.977661" y="0.846847" />
+                            <point x="0.499343" y="0.855856" />
+                            <point x="0.0236531" y="0.837838" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text4" sid="284330567491950">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text" sid="476174494903142">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="WorldMap" sid="335023163671350">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="704485828995782" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\NeoGranzon\Desktop\The_Empire.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BackToMenu" sid="566559313856286">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Stage1Select" sid="883817018473429">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="NormalTank" sid="157388406515700">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="FlamethrowerTank" sid="548947877820519">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="NextSelectionNormalTank" sid="664229160387523">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="NextSelectionFlamethrowerTank" sid="237527852710719">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="TankSelectFlamethrower" sid="550856555394312">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="768655639850309" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\NeoGranzon\Desktop\TU\sprite_0.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.28125" />
+                            <point x="0.5" y="0.21875" />
+                            <point x="0.804688" y="0.195313" />
+                            <point x="0.703125" y="0.703125" />
+                            <point x="0.296875" y="0.703125" />
+                            <point x="0.09375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\NeoGranzon\Desktop\TU\sprite_1.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.28125" />
+                            <point x="0.5" y="0.21875" />
+                            <point x="0.804688" y="0.195313" />
+                            <point x="0.703125" y="0.703125" />
+                            <point x="0.5" y="0.695313" />
+                            <point x="0.296875" y="0.703125" />
+                            <point x="0.078125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TankSelectNormal" sid="224646810951909">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="870585103425936" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\NeoGranzon\Desktop\TU\sprite_0.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.28125" />
+                            <point x="0.5" y="0.21875" />
+                            <point x="0.804688" y="0.195313" />
+                            <point x="0.703125" y="0.703125" />
+                            <point x="0.296875" y="0.703125" />
+                            <point x="0.09375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\NeoGranzon\Desktop\TU\sprite_1.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.28125" />
+                            <point x="0.5" y="0.21875" />
+                            <point x="0.804688" y="0.195313" />
+                            <point x="0.703125" y="0.703125" />
+                            <point x="0.5" y="0.695313" />
+                            <point x="0.296875" y="0.703125" />
+                            <point x="0.078125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FlamethrowerBody" sid="261343846754164">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="8Direction" sid="116173489130147">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="912759570446981">
+                    <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="167714869984321">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="932147652848647" speed="5">
+                    <frame duration="1" hotspotX="0.536842" hotspotY="0.523077" original-source="C:\Users\NeoGranzon\Desktop\Project 1-1 Ironclad Company\Tank1.png">
+                        <collision-poly>
+                            <point x="0.326316" y="0.0153846" />
+                            <point x="0.631579" y="0" />
+                            <point x="0.842105" y="0.169231" />
+                            <point x="0.905263" y="1" />
+                            <point x="0.357895" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.526316" hotspotY="0.523077" original-source="C:\Users\NeoGranzon\Desktop\Project 1-1 Ironclad Company\Tank1.png">
+                        <collision-poly>
+                            <point x="0.336842" y="0.153846" />
+                            <point x="0.631579" y="0.0307692" />
+                            <point x="0.842105" y="0.276923" />
+                            <point x="0.905263" y="1" />
+                            <point x="0.357895" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FlamthrowerCannon" sid="916807909781454">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="Ammo type" name="CurrentAmmo" sid="766638581002598" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="BoundToLayout" sid="105241383367126">
+                    <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="430790408329916">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="451143047453505">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="217059011330900" speed="5">
+                    <frame duration="1" hotspotX="0.0078125" hotspotY="0.476563" original-source="C:\Users\NeoGranzon\Desktop\Project 1-1 Ironclad Company\Tank1 Cannon.png">
+                        <image-point name="ShootPoint" x="1.14844" y="0.507813" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TankFlamethrower" sid="295446519706785">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="430785049772732">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="958017951348832" speed="5">
+                    <frame duration="1" hotspotX="0.162791" hotspotY="0.5" original-source="D:\IDD\Game Projects\Material\Art\Tank\Tank1_MG.png">
+                        <image-point name="Muzzle" x="1" y="0.5" />
+                        <collision-poly>
+                            <point x="0.0465116" y="0.142857" />
+                            <point x="0.488372" y="0.142857" />
+                            <point x="0.906977" y="0.285714" />
+                            <point x="0.976744" y="0.5" />
+                            <point x="0.906977" y="0.714286" />
+                            <point x="0.488372" y="0.928571" />
+                            <point x="0.0465116" y="0.857143" />
+                            <point x="0.0232558" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground4" sid="602341341514566">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\NeoGranzon\Desktop\TU\613530864_preview_Q7TZwX8.png" />
+        </object-type>
+        <object-type name="Sprite9" sid="420284170834908">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="264249523268014">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="299513502768490" speed="5">
+                    <frame duration="1" hotspotX="0.500289" hotspotY="0.50078" original-source="C:\Users\NeoGranzon\Desktop\TU\TUIDDLOGO.png">
+                        <collision-poly>
+                            <point x="0.0496249" y="0.134165" />
+                            <point x="0.944605" y="0.149766" />
+                            <point x="0.998269" y="0.49922" />
+                            <point x="0.944605" y="0.850234" />
+                            <point x="0.0225043" y="0.939158" />
+                            <point x="0.631852" y="0.49922" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ArmorIcon" sid="359595693575074">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="570197119612873" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.0384615" hotspotY="0.0333333">
+                        <collision-poly>
+                            <point x="0.119087" y="0.180593" />
+                            <point x="0.56253" y="0.0934815" />
+                            <point x="0.961538" y="0.180593" />
+                            <point x="0.961538" y="0.5" />
+                            <point x="0.885033" y="0.732296" />
+                            <point x="0.56253" y="0.906519" />
+                            <point x="0.240026" y="0.732296" />
+                            <point x="0.119087" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.0172414" hotspotY="0.0333333">
+                        <collision-poly>
+                            <point x="0.053384" y="0.180593" />
+                            <point x="0.252169" y="0.0934815" />
+                            <point x="0.450953" y="0.180593" />
+                            <point x="0.450953" y="0.5" />
+                            <point x="0.396739" y="0.732296" />
+                            <point x="0.252169" y="0.906519" />
+                            <point x="0.107598" y="0.732296" />
+                            <point x="0.053384" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.0111111" hotspotY="0.0333333">
+                        <collision-poly>
+                            <point x="0.0222222" y="0.157778" />
+                            <point x="0.144444" y="0.0644444" />
+                            <point x="0.266667" y="0.157778" />
+                            <point x="0.266667" y="0.5" />
+                            <point x="0.233333" y="0.748889" />
+                            <point x="0.144444" y="0.935556" />
+                            <point x="0.0555556" y="0.748889" />
+                            <point x="0.0222222" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.00819672" hotspotY="0.0333333">
+                        <collision-poly>
+                            <point x="0.01225" y="0.157778" />
+                            <point x="0.0568366" y="0.0644444" />
+                            <point x="0.101423" y="0.157778" />
+                            <point x="0.101423" y="0.5" />
+                            <point x="0.0892632" y="0.748889" />
+                            <point x="0.0568366" y="0.935556" />
+                            <point x="0.02441" y="0.748889" />
+                            <point x="0.01225" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.00819672" hotspotY="0.0333333">
+                        <collision-poly>
+                            <point x="0.01225" y="0.157778" />
+                            <point x="0.0568366" y="0.0644444" />
+                            <point x="0.101423" y="0.157778" />
+                            <point x="0.101423" y="0.5" />
+                            <point x="0.0892632" y="0.748889" />
+                            <point x="0.0568366" y="0.935556" />
+                            <point x="0.02441" y="0.748889" />
+                            <point x="0.01225" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="TankAndParts" plugin-id="Sprite" sid="377492637423480">
+            <members>
+                <member>FlamethrowerBody</member>
+                <member>FlamthrowerCannon</member>
+                <member>TankBody</member>
+                <member>TankCannon</member>
+                <member>TankFlamethrower</member>
+                <member>TankMachinegun</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="LastHealth" sid="295475096269682" type="number" />
+                <instance-variable name="Heat" sid="834479455236979" type="number" />
+                <instance-variable name="CannonLoaded" sid="964138660709712" type="number" />
+                <instance-variable name="CannonReloading" sid="949712015953868" type="number" />
+                <instance-variable name="IsCoolingDown" sid="168529213208296" type="number" />
+                <instance-variable name="IsFiringSecMG" sid="870465059617575" type="number" />
+                <instance-variable name="IsSprint" sid="449316343182255" type="number" />
+                <instance-variable name="Fuel" sid="354296751910588" type="number" />
+                <instance-variable name="IsFiringMG" sid="554041853076968" type="number" />
+                <instance-variable name="CannonReloadTime" sid="715543573723782" type="number" />
+                <instance-variable name="EngineCooldown" sid="678723495771325" type="number" />
+                <instance-variable name="Armor" sid="704902402567270" type="number" />
+                <instance-variable name="IsRepairing" sid="523798849442703" type="number" />
+                <instance-variable comment="0 = False 1 = True 2 = Checked" name="IsRegen" sid="690171766143986" type="number" />
+                <instance-variable name="RegenCountdown" sid="689670438082632" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Flash" sid="446464482417266">
+                    <behavior id="Flash" />
+                </behavior-type>
+                <behavior-type name="Timer" sid="723836101546091">
+                    <behavior id="Timer" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="Enemies" plugin-id="Sprite" sid="320267588711769">
+            <members>
+                <member>BrainFire</member>
+                <member>ChargingLaser</member>
+                <member>FlameSkull</member>
+                <member>Giant</member>
+                <member>GiantBrainBoss</member>
+                <member>GiantFlameSkull</member>
+                <member>ShieldGoblin</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="HP" sid="296140322312053" type="number" />
+                <instance-variable name="Score" sid="317131542033390" type="number" />
+                <instance-variable name="KillonSprint" sid="479757146789584" type="number" />
+            </instance-variables>
+        </family>
+        <family name="Projectiles" plugin-id="Sprite" sid="335275777516045">
+            <members>
+                <member>Buckshot</member>
+                <member>Bullet</member>
+                <member>CannonBall</member>
+                <member>CannonMuzzle</member>
+                <member>HERound</member>
+                <member>Slug</member>
+            </members>
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout2" sid="671952728796521">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="Ammo" plugin-id="Sprite" sid="827752608326826">
+            <members>
+                <member>HEUI</member>
+                <member>SlugUI</member>
+                <member>Sprite</member>
+                <member>Standard</member>
+            </members>
+        </family>
+        <family name="Debug" plugin-id="Text" sid="627623407429492">
+            <members>
+                <member>CannonIsLoading</member>
+                <member>Engine</member>
+                <member>Heat</member>
+                <member>IsSprint</member>
+                <member>OverHeat</member>
+                <member>TimeToReload</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Shown" sid="799000794754590" type="boolean" />
+            </instance-variables>
+        </family>
+        <family name="PauseMenu" plugin-id="Button" sid="201850786850437">
+            <members>
+                <member>Restart1</member>
+                <member>Save</member>
+                <member>TOmenu</member>
+            </members>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>Game1.xml</layout>
+        <layout>Game2.xml</layout>
+        <layout>Stage 1.xml</layout>
+        <layout>Menu.xml</layout>
+        <layout>Pre-Stage1.xml</layout>
+        <layout>StageSelection.xml</layout>
+        <layout>TankSelection.xml</layout>
+        <layout>Pre-Menu.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet game1.xml</event-sheet>
+        <event-sheet>Event sheet menu.xml</event-sheet>
+        <event-sheet>Event sheet pre-stage 1.xml</event-sheet>
+        <event-sheet>Event sheet StageSelection.xml</event-sheet>
+        <event-sheet>Event sheet game2.xml</event-sheet>
+        <event-sheet>Event sheet TankSelection.xml</event-sheet>
+        <event-sheet>Event sheet Pre-Menu.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Mouse" uid="16" />
+        <global-instance type="Keyboard" uid="17" />
+        <global-instance type="Audio" uid="6">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>Yes</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Browser" uid="30" />
+        <global-instance type="Touch" uid="31">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="CannonFire.m4a" />
+        <file name="CannonFire.ogg" />
+        <file name="Machine Gun 1.m4a" />
+        <file name="Machine Gun 1.ogg" />
+        <file name="TankEngine.m4a" />
+        <file name="TankEngine.ogg" />
+        <file name="Track.m4a" />
+        <file name="Track.ogg" />
+        <file name="EngineRunning.m4a" />
+        <file name="EngineRunning.ogg" />
+        <file name="MachineGunOverheat.m4a" />
+        <file name="MachineGunOverheat.ogg" />
+        <file name="CannonReload.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="last-war.m4a" />
+        <file name="last-war.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Splash Screen">
+            <file name="000.png" />
+            <file name="001.png" />
+            <file name="002.png" />
+            <file name="003.png" />
+            <file name="004.png" />
+            <file name="005.png" />
+            <file name="007.png" />
+            <file name="006.png" />
+            <file name="008.png" />
+            <file name="009.png" />
+        </file-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

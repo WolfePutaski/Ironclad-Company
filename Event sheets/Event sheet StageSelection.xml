@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet StageSelection</name>
+    <events>
+        <event-block sid="580174421467475">
+            <conditions>
+                <condition id="0" name="On clicked" sid="499126116915167" type="BackToMenu" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="434897256749497" type="System">
+                    <param id="0" name="Layout">Menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="555343965347965">
+            <conditions>
+                <condition id="0" name="On clicked" sid="140056764651095" type="Stage1Select" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="981563003078443" type="System">
+                    <param id="0" name="Layout">Pre-Stage1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

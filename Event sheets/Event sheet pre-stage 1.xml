@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet pre-stage 1</name>
+    <events>
+        <event-block sid="594127947280294">
+            <conditions>
+                <condition id="17" name="On tap object" sid="514033901897913" type="Touch">
+                    <param id="0" name="Object">Sprite7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="533361570247754" type="System">
+                    <param id="0" name="Layout">TankSelection</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

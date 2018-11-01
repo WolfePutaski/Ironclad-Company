@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet menu</name>
+    <events>
+        <event-block sid="566215788884777">
+            <conditions>
+                <condition id="0" name="On clicked" sid="589770132005023" type="StartGame" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="965413145316902" type="System">
+                    <param id="0" name="Layout">Pre-Stage1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="899937476379653">
+            <conditions>
+                <condition id="17" name="On tap object" sid="867090292789961" type="Touch">
+                    <param id="0" name="Object">QuitGame</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Close" sid="919883836084723" type="Browser" />
+            </actions>
+        </event-block>
+        <event-block sid="368283140011665">
+            <conditions>
+                <condition id="0" name="On clicked" sid="150035778317282" type="Load" />
+            </conditions>
+            <actions>
+                <action id="-37" name="Load" sid="802760168696211" type="System">
+                    <param id="0" name="Slot">&quot;mysave&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="928175115249044">
+            <conditions>
+                <condition id="0" name="On clicked" sid="312331041784686" type="StageSelect" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="784463514661471" type="System">
+                    <param id="0" name="Layout">StageSelection</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

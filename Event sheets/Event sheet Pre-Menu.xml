@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet Pre-Menu</name>
+    <events>
+        <event-block sid="380819489947115">
+            <conditions>
+                <condition behavior="Fade" id="0" name="On fade-out finished" sid="577328191739538" type="Sprite9" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="880295668840754" type="System">
+                    <param id="0" name="Layout">Menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="389809348112461">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="347816026134267" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="584761240595789" type="Sprite9">
+                    <param id="0" name="Fade-out time">1.75</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

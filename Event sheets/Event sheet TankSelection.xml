@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet TankSelection</name>
+    <events>
+        <event-block sid="594965840122986">
+            <conditions>
+                <condition id="1" name="Is checked" sid="257252371032271" type="NormalTank" />
+                <condition id="1" inverted="1" name="Is checked" sid="376716810241361" type="FlamethrowerTank" />
+            </conditions>
+            <actions>
+                <action id="2" name="Set visible" sid="902778553547154" type="NextSelectionNormalTank">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="2" name="Set visible" sid="555623235440252" type="NextSelectionFlamethrowerTank">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="147896616669791" type="TankSelectNormal">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="541956393130308">
+            <conditions>
+                <condition id="-22" name="Else" sid="616478509585505" type="System" />
+            </conditions>
+            <actions>
+                <action id="2" name="Set visible" sid="756839740200509" type="NextSelectionNormalTank">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="415273198664248" type="TankSelectNormal">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="385458328550067">
+            <conditions>
+                <condition id="0" name="On clicked" sid="498922048401127" type="NextSelectionNormalTank" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="389596353849421" type="System">
+                    <param id="0" name="Layout">Game1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="490851962431409">
+            <conditions>
+                <condition id="1" inverted="1" name="Is checked" sid="487926726700669" type="NormalTank" />
+                <condition id="1" name="Is checked" sid="217623328965478" type="FlamethrowerTank" />
+            </conditions>
+            <actions>
+                <action id="2" name="Set visible" sid="764505309466469" type="NextSelectionFlamethrowerTank">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="2" name="Set visible" sid="767342093981473" type="NextSelectionNormalTank">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="873825769422581" type="TankSelectFlamethrower">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="857056043699608">
+            <conditions>
+                <condition id="-22" name="Else" sid="627611660278056" type="System" />
+            </conditions>
+            <actions>
+                <action id="2" name="Set visible" sid="899977476720711" type="NextSelectionFlamethrowerTank">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="158636821293521" type="TankSelectFlamethrower">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="300555232177110">
+            <conditions>
+                <condition id="0" name="On clicked" sid="820460128527093" type="NextSelectionFlamethrowerTank" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="484243143467146" type="System">
+                    <param id="0" name="Layout">Game2</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

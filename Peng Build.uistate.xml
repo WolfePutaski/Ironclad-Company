@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="1">Pre-Stage1</layout>
+        <layout order="2">Menu</layout>
+        <layout order="4">Game1</layout>
+        <layout order="6">StageSelection</layout>
+        <layout order="10">TankSelection</layout>
+        <layout order="11">Game2</layout>
+        <layout order="12">Pre-Menu</layout>
+        <event-sheet order="0">Event sheet menu</event-sheet>
+        <event-sheet order="3">Event sheet pre-stage 1</event-sheet>
+        <event-sheet active="1" order="5">Event sheet game1</event-sheet>
+        <event-sheet order="7">Event sheet StageSelection</event-sheet>
+        <event-sheet order="8">Event sheet game2</event-sheet>
+        <event-sheet order="9">Event sheet TankSelection</event-sheet>
+        <event-sheet order="13">Event sheet Pre-Menu</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="1" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1">
+        <family expanded="0" name="TankAndParts" />
+        <family expanded="1" name="Enemies" />
+        <family expanded="0" name="Projectiles" />
+        <family expanded="0" name="Ammo" />
+        <family expanded="0" name="Debug" />
+        <family expanded="0" name="PauseMenu" />
+    </families-expanded>
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/Projectile/" />
+        <folder expanded="0" path="object-folder/VFX/" />
+        <folder expanded="1" path="object-folder/Enemies/" />
+        <folder expanded="1" path="object-folder/AmmoType/" />
+        <folder expanded="0" path="object-folder/Debug/" />
+        <folder expanded="1" path="object-folder/PauseScreen/" />
+        <folder expanded="1" path="object-folder/TutorialText/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="0" path="file-folder/" />
+        <folder expanded="0" path="sound-folder/" />
+        <folder expanded="0" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Splash Screen/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/Buckshot/" />
+        <folder expanded="1" path="animation-folder/Bullet/" />
+        <folder expanded="1" path="animation-folder/CannonBall/" />
+        <folder expanded="1" path="animation-folder/HERound/" />
+        <folder expanded="1" path="animation-folder/Slug/" />
+        <folder expanded="1" path="animation-folder/MGMuzzle/" />
+        <folder expanded="1" path="animation-folder/CannonMuzzle/" />
+        <folder expanded="1" path="animation-folder/MGHit/" />
+        <folder expanded="1" path="animation-folder/GiantFlameSkull/" />
+        <folder expanded="1" path="animation-folder/ShieldGoblin/" />
+        <folder expanded="1" path="animation-folder/FlameSkull/" />
+        <folder expanded="1" path="animation-folder/Giant/" />
+        <folder expanded="1" path="animation-folder/GiantBrainBoss/" />
+        <folder expanded="1" path="animation-folder/BrainFire/" />
+        <folder expanded="1" path="animation-folder/ChargingLaser/" />
+        <folder expanded="1" path="animation-folder/SlugUI/" />
+        <folder expanded="1" path="animation-folder/Standard/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/HEUI/" />
+        <folder expanded="1" path="animation-folder/TankCannon/" />
+        <folder expanded="1" path="animation-folder/TankBody/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/Sprite4/" />
+        <folder expanded="1" path="animation-folder/Sprite5/" />
+        <folder expanded="1" path="animation-folder/Sprite6/" />
+        <folder expanded="1" path="animation-folder/TankMachinegun/" />
+        <folder expanded="1" path="animation-folder/Sprite7/" />
+        <folder expanded="1" path="animation-folder/Sprite8/" />
+        <folder expanded="1" path="animation-folder/WorldMap/" />
+        <folder expanded="1" path="animation-folder/TankSelectFlamethrower/" />
+        <folder expanded="1" path="animation-folder/TankSelectNormal/" />
+        <folder expanded="1" path="animation-folder/FlamethrowerBody/" />
+        <folder expanded="1" path="animation-folder/FlamthrowerCannon/" />
+        <folder expanded="1" path="animation-folder/TankFlamethrower/" />
+        <folder expanded="1" path="animation-folder/Sprite9/" />
+        <folder expanded="1" path="animation-folder/ArmorIcon/" />
+    </folders-expanded>
+</c2uistate>
