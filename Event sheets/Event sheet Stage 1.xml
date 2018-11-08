@@ -1,0 +1,1149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet Stage 1</name>
+    <events>
+        <variable comment="1= On" constant="0" name="OnTutorial" sid="883749875207130" static="0" type="number">0</variable>
+        <variable constant="0" name="Score" sid="316944314821607" static="0" type="number">0</variable>
+        <variable constant="0" name="OnWave" sid="856089678403792" static="0" type="number">1</variable>
+        <variable constant="0" name="IsPause" sid="238385455576774" static="0" type="number">0</variable>
+        <event-block sid="246513397357889">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="131520967438248" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="986333673452690" type="Audio">
+                    <param id="0" name="Audio file">last-war</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;BG&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="324464231013309" type="Enemies" />
+            </actions>
+        </event-block>
+        <event-group description="" sid="430126203580229" title="On Tutorial">
+            <sub-events>
+                <event-block sid="348103511028687">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="586100289929449" type="System">
+                            <param id="0" name="Variable">OnTutorial</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="742574839218783">
+                            <conditions>
+                                <condition id="-19" name="On destroyed" sid="263102137874043" type="Enemies" />
+                            </conditions>
+                            <actions>
+                                <action id="-42" name="Signal" sid="236308340067307" type="System">
+                                    <param id="0" name="Tag">&quot;TutorialPass&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="656070305300611">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="829194683631328" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="297797492244244" type="System">
+                                    <param id="0" name="Object to create">ShieldGoblin</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">500</param>
+                                    <param id="3" name="Y">566</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="208401212524431" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="120537292580403" type="Tutorial1">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="231820050540040" type="System">
+                                    <param id="0" name="Time scale">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="684886871211719">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="114907043136060" type="Keyboard">
+                                    <param id="0" name="Key">16 (Shift)</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="278771577697466" type="System">
+                                    <param id="0" name="Variable">OnTutorial</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="216012711350078" type="Tutorial1">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="169328496441407" type="System">
+                                    <param id="0" name="Time scale">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="545724882858249" type="System">
+                                    <param id="0" name="Variable">OnTutorial</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="-41" name="Wait for signal" sid="112159287368848" type="System">
+                                    <param id="0" name="Tag">&quot;TutorialPass&quot;</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="102925834802450" type="System">
+                                    <param id="0" name="Object to create">FlameSkull</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">1600</param>
+                                    <param id="3" name="Y">200</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="859495946059275" type="System">
+                                    <param id="0" name="Seconds">2.3</param>
+                                </action>
+                                <action id="0" name="Set text" sid="861446260465288" type="Tutorial1">
+                                    <param id="0" name="Text">&quot;Hold LEFT to fire the machine gun&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="389395157264684" type="Tutorial1">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="493302193023687" type="System">
+                                    <param id="0" name="Time scale">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="837822246881736">
+                            <conditions>
+                                <condition id="0" name="On click" sid="826236391714459" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="984996903338817" type="System">
+                                    <param id="0" name="Variable">OnTutorial</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="909649481523054" type="System">
+                                    <param id="0" name="Variable">OnTutorial</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="362970405235739" type="Tutorial1">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="911648057956760" type="System">
+                                    <param id="0" name="Time scale">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="236202607554987" type="System">
+                                    <param id="0" name="Variable">OnTutorial</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                                <action id="-41" name="Wait for signal" sid="608968362021906" type="System">
+                                    <param id="0" name="Tag">&quot;TutorialPass&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="882036348235458" type="System">
+                                    <param id="0" name="Seconds">1.5</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="275904516798753" type="Tutorial1">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="329082102449782" type="Tutorial1">
+                                    <param id="0" name="Text">&quot;use Right mouse for machine gun secondary fire&quot;</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="686776212719131" type="System">
+                                    <param id="0" name="Object to create">GiantFlameSkull</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">1500</param>
+                                    <param id="3" name="Y">170</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="715629728188285" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="0" name="Set text" sid="243235571405481" type="Tutorial1">
+                                    <param id="0" name="Text">&quot;A and S to aim the cannon&#x0D;&#x0A;Press Space to Fire Cannon&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="318103162257274" type="Tutorial1">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="209002662339059" type="System">
+                                    <param id="0" name="Time scale">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="301383800469131">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="227904548309128" type="Keyboard">
+                                    <param id="0" name="Key">32 (Space)</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="895581492325730" type="System">
+                                    <param id="0" name="Variable">OnTutorial</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="726380625008840" type="Tutorial1">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="489347448946481" type="System">
+                                    <param id="0" name="Time scale">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="290075619072407" type="System">
+                                    <param id="0" name="Variable">OnTutorial</param>
+                                    <param id="1" name="Value">5</param>
+                                </action>
+                                <action id="-41" name="Wait for signal" sid="105224445333643" type="System">
+                                    <param id="0" name="Tag">&quot;TutorialPass&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="427248220375088" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="192861221076383" type="Tutorial1">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="256397915980507" type="Tutorial1">
+                                    <param id="0" name="Text">&quot;Cannon must be reloaded after every shot.&#x0D;&#x0A;You can swap out for a new ammo with &apos;Q&apos;and &apos;E&apos;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="929753491511587" type="System">
+                                    <param id="0" name="Seconds">3.5</param>
+                                </action>
+                                <action id="0" name="Set text" sid="542505978087633" type="Tutorial1">
+                                    <param id="0" name="Text">&quot;You should have learned all the basics right now&#x0D;&#x0A;and  we&apos;re apporaching the enemy so be ready.&#x0D;&#x0A;Survive through them for 2 miniutes 30 seconds&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="551896721195663" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action id="0" name="Set text" sid="170923499253148" type="Tutorial1">
+                                    <param id="0" name="Text">&quot;Let&apos;s go&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="612527046800331" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="853547404319571" type="Tutorial1">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="815159753840196" type="System">
+                                    <param id="0" name="Variable">OnTutorial</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="360658698866210" type="System">
+                                    <param id="0" name="Variable">OnWave</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="432359321227412" title="Score">
+            <sub-events>
+                <event-block sid="345127706094583">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="614304031399524" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="189672851534978" type="Scoreboard">
+                            <param id="0" name="Text">&quot;Score : &quot;&amp;Score</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="147962992686064" title="Enemy Behavior">
+            <sub-events>
+                <event-block sid="936622644351157">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="469508019995009" type="ChargingLaser">
+                            <param id="0" name="Object">TankAndParts</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="494047402066250" type="TankAndParts">
+                            <param id="0" name="Instance variable">Armor</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="437106561357209">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="219311851283827" type="Enemies">
+                            <param id="0" name="Object">TankBody</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="191457075252107" type="TankAndParts">
+                            <param id="0" name="Instance variable">IsSprint</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">Enemies.KillonSprint</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="817928542920869" type="TankAndParts">
+                            <param id="0" name="Instance variable">Armor</param>
+                            <param id="1" name="Value">clamp(TankAndParts.Armor-1,0,3)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="556061168954663" type="TankAndParts">
+                            <param id="0" name="Instance variable">RegenCountdown</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="827788007752208" type="Enemies" />
+                        <action behavior="Flash" id="0" name="Flash" sid="147371177534957" type="TankAndParts">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="974457044085945" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">Enemies.Score</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="754308301670526">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="171932797543451" type="Enemies">
+                            <param id="0" name="Instance variable">HP</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="303834670485309" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">Enemies.Score</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="825968645595873" type="Enemies" />
+                    </actions>
+                </event-block>
+                <event-group description="" sid="927470068890104" title="Giant" />
+                <event-group description="" sid="595135117256591" title="Sheild Goblin" />
+                <event-group description="" sid="312521424130902" title="Flame Skull">
+                    <sub-events>
+                        <event-block sid="368932210729169">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="946963890942934" type="FlameSkull" />
+                            </conditions>
+                            <actions>
+                                <action id="8" name="Set flipped" sid="212655806945514" type="FlameSkull">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="374040148280666" type="FlameSkull">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="949093056860683" type="FlameSkull">
+                                    <param id="0" name="Angle">180</param>
+                                </action>
+                                <action id="6" name="Set speed" sid="248169310301919" type="FlameSkull">
+                                    <param id="0" name="Speed">10</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="989248588716237" type="FlameSkull">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="842407310925591">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="724130282235907" type="FlameSkull">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="X co-ordinate">random(600,1000)</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="742635818931005" type="FlameSkull">
+                                    <param id="0" name="Instance variable">Finding</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="889842480195446" type="FlameSkull">
+                                    <param id="0" name="Instance variable">Finding</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="486813094511536">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="244695632736211" type="FlameSkull">
+                                            <param id="0" name="Instance variable">Finding</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-21" name="Rotate toward position" sid="905167188835488" type="FlameSkull">
+                                            <param id="0" name="Degrees">360</param>
+                                            <param id="1" name="X">TankAndParts.X</param>
+                                            <param id="2" name="Y">TankAndParts.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="313215812761902" type="FlameSkull">
+                                            <param id="0" name="Instance variable">Finding</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="690032539654044" title="Giant Flame Skull">
+                    <sub-events>
+                        <event-block sid="789440145596876">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="896640062439992" type="GiantFlameSkull" />
+                            </conditions>
+                            <actions>
+                                <action id="8" name="Set flipped" sid="150929976812976" type="GiantFlameSkull">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="299857254551278" type="GiantFlameSkull">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="716163910469470" type="GiantFlameSkull">
+                                    <param id="0" name="Angle">180</param>
+                                </action>
+                                <action id="6" name="Set speed" sid="514806816508259" type="GiantFlameSkull">
+                                    <param id="0" name="Speed">10</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="203250698714470" type="GiantFlameSkull">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="531303336140336">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="870708501122929" type="GiantFlameSkull">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="X co-ordinate">random(600,1000)</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="281774618253104" type="GiantFlameSkull">
+                                    <param id="0" name="Instance variable">Finding</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-21" name="Rotate toward position" sid="219040268480432" type="GiantFlameSkull">
+                                    <param id="0" name="Degrees">360</param>
+                                    <param id="1" name="X">TankAndParts.X</param>
+                                    <param id="2" name="Y">TankAndParts.Y</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="582846694722477" type="GiantFlameSkull">
+                                    <param id="0" name="Instance variable">Finding</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="542946216035150" title="Giant Brain">
+                    <sub-events>
+                        <event-group description="" sid="493029820875670" title="Projectile">
+                            <sub-events>
+                                <event-group description="" sid="896550160916784" title="LightFire">
+                                    <sub-events>
+                                        <event-block sid="405331049464341">
+                                            <conditions>
+                                                <condition id="-18" name="On created" sid="917611337672480" type="BrainFire" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-21" name="Rotate toward position" sid="316247858871318" type="BrainFire">
+                                                    <param id="0" name="Degrees">360</param>
+                                                    <param id="1" name="X">TankAndParts.X</param>
+                                                    <param id="2" name="Y">TankAndParts.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="799687602161849">
+                                            <conditions>
+                                                <condition id="-18" name="On created" sid="858703021451399" type="ChargingLaser" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set mirrored" sid="642272069485734" type="ChargingLaser">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action id="-21" name="Rotate toward position" sid="778801283171143" type="ChargingLaser">
+                                                    <param id="0" name="Degrees">360</param>
+                                                    <param id="1" name="X">TankAndParts.X</param>
+                                                    <param id="2" name="Y">TankAndParts.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-group>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="598447477003798" title="Firing">
+                            <sub-events>
+                                <event-block sid="224148962774394">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="224313598352897" type="GiantBrainBoss">
+                                            <param id="0" name="Instance variable">OnFiring</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="313899241276202">
+                                            <conditions>
+                                                <condition id="-6" name="Every X seconds" sid="946645483412104" type="System">
+                                                    <param id="0" name="Interval (seconds)">0.28</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="282991683549552" type="GiantBrainBoss">
+                                                    <param id="0" name="Object">BrainFire</param>
+                                                    <param id="1" name="Layer">1</param>
+                                                    <param id="2" name="Image point">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="858915061020102">
+                                            <conditions>
+                                                <condition id="-6" name="Every X seconds" sid="634441537873841" type="System">
+                                                    <param id="0" name="Interval (seconds)">random(6,10)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="560206417104157" type="GiantBrainBoss">
+                                                    <param id="0" name="Instance variable">OnCharging</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="586377768903597" type="GiantBrainBoss">
+                                                    <param id="0" name="Instance variable">OnFiring</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="329500463531547">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="440609641257912" type="GiantBrainBoss">
+                                                            <param id="0" name="Instance variable">OnCharging</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="871393368501589" type="GiantBrainBoss">
+                                                            <param id="0" name="Animation">&quot;ChargingFire&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="-16" name="Wait" sid="604465221230233" type="System">
+                                                            <param id="0" name="Seconds">2.5</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="780944769578099" type="GiantBrainBoss">
+                                                            <param id="0" name="Instance variable">OnCharging</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="717654317954790" type="GiantBrainBoss">
+                                                            <param id="0" name="Object">ChargingLaser</param>
+                                                            <param id="1" name="Layer">1</param>
+                                                            <param id="2" name="Image point">0</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="972504377874131" type="GiantBrainBoss">
+                                                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="-16" name="Wait" sid="517201374376248" type="System">
+                                                            <param id="0" name="Seconds">2</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="539795273007854" type="GiantBrainBoss">
+                                                            <param id="0" name="Instance variable">OnFiring</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="862591876322826" title="Map">
+            <sub-events>
+                <event-block sid="883469466045962">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="641162147641759" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="920085101463877" type="TiledBackground2">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="465669745596195" type="TiledBackground3">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="346690788832889">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="772737342636257" type="TankAndParts">
+                            <param id="0" name="Instance variable">IsRepairing</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="383216868941831">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="532435234094413" type="Sprite2">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="X co-ordinate">-Self.Width / 2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="113782535962750" type="Sprite2">
+                                    <param id="0" name="X">Self.X + Self.Width / 2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="978614019110170">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="206382972911697" type="TiledBackground3">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="X co-ordinate">-Self.Width / 2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="730220227657092" type="TiledBackground3">
+                                    <param id="0" name="X">Self.X + Self.Width / 2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="859119242658004">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="362413027962997" type="TiledBackground2">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="X co-ordinate">-Self.Width / 2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="419170959732985" type="TiledBackground2">
+                                    <param id="0" name="X">Self.X + Self.Width / 2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="292660496712359">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="888653901142575" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="134368662207211" type="Sprite2">
+                            <param id="0" name="X">Self.X</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="831338864895087" type="TiledBackground3">
+                            <param id="0" name="X">Self.X</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="812898013663661" type="TiledBackground2">
+                            <param id="0" name="X">Self.X</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="445507955230593" title="Damage To Enemy">
+            <sub-events>
+                <event-block sid="891886701784012">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="396607593024063" type="Sprite6">
+                            <param id="0" name="Object">Enemies</param>
+                        </condition>
+                        <condition id="-10" name="Compare opacity" sid="110199996531081" type="Sprite6">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Opacity">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="704602839948304" type="Enemies">
+                            <param id="0" name="Instance variable">HP</param>
+                            <param id="1" name="Value">250</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="496144952092988" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>If a bullet hits an enemy, subtract 10 from its health.  When an enemy runs out of health, destroy it.</comment>
+                <event-block sid="269690233008894">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="736676481925571" type="CannonBall">
+                            <param id="0" name="Object">Enemies</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="737881153410131" type="Enemies">
+                            <param id="0" name="Instance variable">HP</param>
+                            <param id="1" name="Value">70</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="580404174952784" type="CannonBall" />
+                        <action id="-10" name="Add to" sid="273881551260384" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">50</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="790768841640038">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="526056311003560" type="Slug">
+                            <param id="0" name="Object">Enemies</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="991451811324742" type="Enemies">
+                            <param id="0" name="Instance variable">HP</param>
+                            <param id="1" name="Value">50</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="843068777190323" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">50</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="274542567969771">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="897215817864018" type="Buckshot">
+                            <param id="0" name="Object">Enemies</param>
+                        </condition>
+                        <condition id="-10" name="Compare opacity" sid="303361794929849" type="Buckshot">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Opacity">90</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="180100769339085" type="Enemies">
+                            <param id="0" name="Instance variable">HP</param>
+                            <param id="1" name="Value">100</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="856059974728027" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">80</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="453232833162999">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="540745844740062" type="Bullet">
+                            <param id="0" name="Object">Enemies</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="170976649891110" type="Enemies">
+                            <param id="0" name="Instance variable">HP</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="986839287851412" type="Bullet" />
+                        <action id="-10" name="Add to" sid="774354272393761" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="836973450830087" type="Bullet">
+                            <param id="0" name="Object">MGHit</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Enemy with KillonSprint = 1 will be killed when sprint on it</comment>
+                <event-block sid="416814071863129">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="178478525939446" type="TankAndParts">
+                            <param id="0" name="Object">Enemies</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="219458606497925" type="TankAndParts">
+                            <param id="0" name="Instance variable">IsSprint</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="625440191569902" type="TankAndParts">
+                            <param id="0" name="Instance variable">IsSprint</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Enemies.KillonSprint</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="593460790322829" type="Enemies" />
+                        <action id="-10" name="Add to" sid="916051860688928" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">50</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="723891591764286" title="Enemy Spawn">
+            <sub-events>
+                <event-block sid="608132997167018">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="951048945413347" type="System">
+                            <param id="0" name="Variable">OnTutorial</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="128222215491530" type="System">
+                            <param id="0" name="Variable">OnWave</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="673642729343639" type="System">
+                            <param id="0" name="Seconds">150</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="863451433602464" type="System">
+                            <param id="0" name="Variable">OnWave</param>
+                            <param id="1" name="Value">1.5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="365757278419799">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="445906444312134" type="System">
+                            <param id="0" name="Variable">OnWave</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="841018625441320">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="960252757031518" type="System">
+                                    <param id="0" name="Interval (seconds)">random(3,5)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="330300366767261" type="System">
+                                    <param id="0" name="Object to create">FlameSkull</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">1320</param>
+                                    <param id="3" name="Y">random(100,450)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="959413410074344">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="435834654619595" type="System">
+                                    <param id="0" name="Interval (seconds)">random(2,5)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="841755816155054" type="System">
+                                    <param id="0" name="Object to create">ShieldGoblin</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">1320</param>
+                                    <param id="3" name="Y">566</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="407695774319791">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="762035022090317" type="System">
+                                    <param id="0" name="Interval (seconds)">random(15,20)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="323811676954254" type="System">
+                                    <param id="0" name="Object to create">Giant</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">1350</param>
+                                    <param id="3" name="Y">515</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="292119133304699">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="139459129233594" type="System">
+                                    <param id="0" name="Interval (seconds)">random(8,20)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="118927591128243" type="System">
+                                    <param id="0" name="Object to create">GiantFlameSkull</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">1350</param>
+                                    <param id="3" name="Y">random(100,450)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Force Boss Phase</comment>
+                <event-block sid="473331257040489">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="971863403426342" type="Keyboard">
+                            <param id="0" name="Key">8 (Backspace)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="547020303569284" type="Enemies" />
+                        <action id="-9" name="Set value" sid="567965493284266" type="System">
+                            <param id="0" name="Variable">OnTutorial</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="733324955063773" type="System">
+                            <param id="0" name="Variable">OnWave</param>
+                            <param id="1" name="Value">1.5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Boss Wave</comment>
+                <event-block sid="751859508396374">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="680187645353293" type="System">
+                            <param id="0" name="Variable">OnWave</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1.5</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="836188308935924" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="572716771189734" type="System">
+                            <param id="0" name="Seconds">8</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="197224198895888" type="Enemies" />
+                        <action id="0" name="Set text" sid="732675658175043" type="Tutorial1">
+                            <param id="0" name="Text">&quot;boss imcoming&#x0D;&#x0A;Defend it&apos;s attack by shooting the projectile&#x0D;&#x0A;use cannon to defend the stronger beam&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="223595838957943" type="Tutorial1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="896246653921836" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="944129738940455" type="System">
+                            <param id="0" name="Object to create">GiantBrainBoss</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">820</param>
+                            <param id="3" name="Y">256</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="495996735970683" type="Tutorial1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="289131662431139" type="System">
+                            <param id="0" name="Variable">OnWave</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="398586661550621">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="522831924473568" type="GiantBrainBoss">
+                            <param id="0" name="Instance variable">HP</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="389453938747414" type="System">
+                            <param id="0" name="Variable">OnWave</param>
+                            <param id="1" name="Value">2.5</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="727515378197551" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="617622120824996" type="Tutorial1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="250141718463840" type="Tutorial1">
+                            <param id="0" name="Text">&quot;Stage 1 is clear&#x0D;&#x0A;End of Alpha presentation&#x0D;&#x0A;Prese ESC to pause and quit the stage&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="849335924764158" title="Menu">
+            <sub-events>
+                <event-block sid="217634897799268">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="713322945690040" type="Restart1" />
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="475791458312618" type="System" />
+                        <action id="-9" name="Set value" sid="411785516706887" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="779672900576952">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="272750624954089" type="Save" />
+                    </conditions>
+                    <actions>
+                        <action id="-36" name="Save" sid="206320107586256" type="System">
+                            <param id="0" name="Slot">&quot;mysave&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="353300747138401">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="798069379022730" type="TOmenu" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="264985251447310" type="System">
+                            <param id="0" name="Layout">Menu</param>
+                        </action>
+                        <action id="33" name="Stop all" sid="540164183836998" type="Audio" />
+                    </actions>
+                </event-block>
+                <event-block sid="168567597343654">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="766963723425197" type="Keyboard">
+                            <param id="0" name="Key">27 (Esc)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="187861012047730" type="System">
+                            <param id="0" name="Variable">IsPause</param>
+                            <param id="1" name="Value">0+timescale</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="763593580885990" type="System">
+                            <param id="0" name="Time scale">1-timescale</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="198758081220081">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="209674744767848" type="System">
+                                    <param id="0" name="Variable">IsPause</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set visible" sid="925673376562849" type="PauseMenu">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="100169352683072" type="PAUSED">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="667390745506570">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="130446011276038" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set visible" sid="572667081164343" type="PauseMenu">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="135867991223927" type="PAUSED">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="115101628243259" title="Debug Menu &amp; HUD">
+            <sub-events>
+                <event-block sid="211050044100552">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="904898573665786" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="755202265375861" type="AmmoDisplay">
+                            <param id="0" name="Text">&quot;Current Ammo Type: &quot;&amp;TankCannon.CurrentAmmo</param>
+                        </action>
+                        <action id="0" name="Set text" sid="974106880481310" type="Health">
+                            <param id="0" name="Text">&quot;Current Health: &quot;&amp;TankAndParts.LastHealth</param>
+                        </action>
+                        <action id="0" name="Set text" sid="216265849832446" type="Heat">
+                            <param id="0" name="Text">&quot;Heat : &quot;&amp;TankAndParts.Heat</param>
+                        </action>
+                        <action id="0" name="Set text" sid="156275388227002" type="Engine">
+                            <param id="0" name="Text">&quot;Engine: &quot; &amp;TankAndParts.Fuel</param>
+                        </action>
+                        <action id="0" name="Set text" sid="920559876630082" type="OverHeat">
+                            <param id="0" name="Text">&quot;Cooling Down &quot;&amp;TankAndParts.IsCoolingDown</param>
+                        </action>
+                        <action id="0" name="Set text" sid="341748550086997" type="IsSprint">
+                            <param id="0" name="Text">&quot;Is Sprinting: &quot;&amp;TankAndParts.IsSprint</param>
+                        </action>
+                        <action id="0" name="Set text" sid="452204919268806" type="CannonIsLoading">
+                            <param id="0" name="Text">&quot;Cannon Is Loading: &quot;&amp;TankAndParts.CannonReloading</param>
+                        </action>
+                        <action id="0" name="Set text" sid="303184902749386" type="TimeToReload">
+                            <param id="0" name="Text">&quot;Time To Reload: &quot;&amp;TankAndParts.CannonReloadTime</param>
+                        </action>
+                        <action id="0" name="Set text" sid="364149434658129" type="Armor">
+                            <param id="0" name="Text">&quot;Armor :&quot;&amp;TankAndParts.Armor</param>
+                        </action>
+                        <action id="0" name="Set text" sid="748554597673186" type="Repairing">
+                            <param id="0" name="Text">&quot;Repairing&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="968869495921285" type="ArmorIcon">
+                            <param id="0" name="Frame number">TankAndParts.Armor</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="321953690441567">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="114112142935806" type="TankAndParts">
+                            <param id="0" name="Instance variable">Armor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="338913304600554" type="Armor">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="513509697754589">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="790687722384818" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="0" name="Restart fade" sid="215458186618199" type="Repairing" />
+                        <action behavior="Fade" id="0" name="Restart fade" sid="193557530781873" type="Armor" />
+                    </actions>
+                </event-block>
+                <event-block sid="877852037459329">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="291810430689602" type="Keyboard">
+                            <param id="0" name="Key">106 (Num Mult)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-14" name="Toggle boolean" sid="676021491845668" type="Debug">
+                            <param id="0" name="Instance variable">Shown</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="194807009068436">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="832077194458041" type="Debug">
+                            <param id="0" name="Instance variable">Shown</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="923054851620811" type="Debug">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="893227884826140">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="258184214383244" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="980370331459743" type="Debug">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>Make New Event Sheet for Tank control only and for other stage layout, copy using &quot;Include Sheet&quot;</comment>
+    </events>
+</c2eventsheet>

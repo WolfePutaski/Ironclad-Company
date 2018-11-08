@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet TankSelection</name>
     <events>
+        <variable comment="0=Standard 1=Flame 2=Heavy" constant="0" name="TankSelect" sid="871747786358024" static="0" type="number">0</variable>
         <event-block sid="594965840122986">
             <conditions>
                 <condition id="1" name="Is checked" sid="257252371032271" type="NormalTank" />
@@ -17,6 +18,10 @@
                 </action>
                 <action id="-15" name="Set visible" sid="147896616669791" type="TankSelectNormal">
                     <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="649410097314626" type="System">
+                    <param id="0" name="Variable">TankSelect</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
@@ -39,7 +44,7 @@
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="389596353849421" type="System">
-                    <param id="0" name="Layout">Game1</param>
+                    <param id="0" name="Layout">Stage1</param>
                 </action>
             </actions>
         </event-block>
@@ -57,6 +62,10 @@
                 </action>
                 <action id="-15" name="Set visible" sid="873825769422581" type="TankSelectFlamethrower">
                     <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="620385789710435" type="System">
+                    <param id="0" name="Variable">TankSelect</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
@@ -77,11 +86,7 @@
             <conditions>
                 <condition id="0" name="On clicked" sid="820460128527093" type="NextSelectionFlamethrowerTank" />
             </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="484243143467146" type="System">
-                    <param id="0" name="Layout">Game2</param>
-                </action>
-            </actions>
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>

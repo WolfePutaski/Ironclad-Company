@@ -1,0 +1,1218 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet Stage 1 Flamthrower</name>
+    <events>
+        <event-group description="" sid="785622424971282" title="Player Control2">
+            <sub-events>
+                <event-group description="" sid="508679480476854" title="On Start2">
+                    <sub-events>
+                        <event-block sid="896806719489364">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="280008251222370" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="8" name="Set silent" sid="544552259753863" type="Audio">
+                                    <param id="0" name="Mode">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="461700784641021" type="Audio">
+                                    <param id="0" name="Audio file">Track</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;start track&quot;</param>
+                                </action>
+                                <action id="0" name="Play" sid="540488944125348" type="Audio">
+                                    <param id="0" name="Audio file">last-war</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">-5</param>
+                                    <param id="1" name="Tag (optional)">&quot;BG&quot;</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="445269364868074" type="System">
+                                    <param id="0" name="Time scale">1.0</param>
+                                </action>
+                                <action id="10" name="Set master volume" sid="316986687290942" type="Audio">
+                                    <param id="0" name="dB">-15</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="414836412323347" type="Enemies" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="110127741980149">
+                            <conditions>
+                                <condition id="5" inverted="1" name="Is tag playing" sid="693980222438332" type="Audio">
+                                    <param id="0" name="Tag">&quot;1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="183895845915959" type="Audio">
+                                    <param id="0" name="Audio file">EngineRunning</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;1&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="196013085886540">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="201688076459198" type="Keyboard">
+                                    <param id="0" name="Key">109 (Num -)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="10" name="Set master volume" sid="163026574733573" type="Audio">
+                                    <param id="0" name="dB">Audio.MasterVolume-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="676229329601061">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="219821169586206" type="Keyboard">
+                                    <param id="0" name="Key">107 (Num +)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="10" name="Set master volume" sid="707118972439366" type="Audio">
+                                    <param id="0" name="dB">Audio.MasterVolume+1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="437453398916960">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="826645872522213" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="128686443270949" type="TankCannon">
+                                    <param id="0" name="Pin to">TankBody</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="555264872028786" type="TankMachinegun">
+                                    <param id="0" name="Pin to">TankBody</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="692778087596006">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="619716222890594" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="794533267571693" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsRepairing</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="883655808107966" type="TankBody">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                                <action id="6" name="Set speed" sid="696750547553969" type="TankBody">
+                                    <param id="0" name="Speed">12</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="350612647781705" type="TankBody">
+                                    <param id="0" name="Animation">&quot;Flamethrower&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="908137321289754" type="TankCannon">
+                                    <param id="0" name="Animation">&quot;Flamethrower&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="261193157560869" type="TankMachinegun">
+                                    <param id="0" name="Animation">&quot;Flamethrower&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="764047652255029" title="On Tutorial2">
+                    <sub-events>
+                        <event-block sid="874755959512982">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="213848120590586" type="System">
+                                    <param id="0" name="Variable">OnTutorial</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="588027029017610">
+                                    <conditions>
+                                        <condition id="-19" name="On destroyed" sid="152236867299772" type="Enemies" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-42" name="Signal" sid="103842449226792" type="System">
+                                            <param id="0" name="Tag">&quot;TutorialPass&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="266210435518003">
+                                    <conditions>
+                                        <condition id="-2" name="On start of layout" sid="431713980793231" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="884948004146094" type="System">
+                                            <param id="0" name="Object to create">ShieldGoblin</param>
+                                            <param id="1" name="Layer">1</param>
+                                            <param id="2" name="X">500</param>
+                                            <param id="3" name="Y">566</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="341299742777303" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="485175430638526" type="Tutorial1">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-13" name="Set time scale" sid="529013346182003" type="System">
+                                            <param id="0" name="Time scale">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="240773071062062">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="446686974959101" type="Keyboard">
+                                            <param id="0" name="Key">16 (Shift)</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="110853158257146" type="System">
+                                            <param id="0" name="Variable">OnTutorial</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="997058159664164" type="Tutorial1">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-13" name="Set time scale" sid="366491710519819" type="System">
+                                            <param id="0" name="Time scale">1</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="775461627633615" type="System">
+                                            <param id="0" name="Object to create">FlameSkull</param>
+                                            <param id="1" name="Layer">1</param>
+                                            <param id="2" name="X">1600</param>
+                                            <param id="3" name="Y">200</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="656600712578238" type="System">
+                                            <param id="0" name="Seconds">2.3</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="914500139143620" type="Tutorial1">
+                                            <param id="0" name="Text">&quot;Hold LEFT to fire the machine gun&quot;</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="639984510380658" type="Tutorial1">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-13" name="Set time scale" sid="413656134975315" type="System">
+                                            <param id="0" name="Time scale">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="264357252327000">
+                                    <conditions>
+                                        <condition id="0" name="On click" sid="631873565933608" type="Mouse">
+                                            <param id="0" name="Mouse button">0</param>
+                                            <param id="1" name="Click type">0</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="547193737202324" type="System">
+                                            <param id="0" name="Variable">OnTutorial</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="952034507205753" type="System">
+                                            <param id="0" name="Variable">OnTutorial</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="766110863907293" type="Tutorial1">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-13" name="Set time scale" sid="127682517913872" type="System">
+                                            <param id="0" name="Time scale">1</param>
+                                        </action>
+                                        <action id="-41" name="Wait for signal" sid="863607879968648" type="System">
+                                            <param id="0" name="Tag">&quot;TutorialPass&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="904551421319835" type="System">
+                                            <param id="0" name="Seconds">1.5</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="557269439887338" type="Tutorial1">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="700941261790683" type="Tutorial1">
+                                            <param id="0" name="Text">&quot;use Right mouse for machine gun secondary fire&quot;</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="282735132753812" type="System">
+                                            <param id="0" name="Object to create">GiantFlameSkull</param>
+                                            <param id="1" name="Layer">1</param>
+                                            <param id="2" name="X">1500</param>
+                                            <param id="3" name="Y">170</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="559571421618770" type="System">
+                                            <param id="0" name="Seconds">2</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="920390450646209" type="Tutorial1">
+                                            <param id="0" name="Text">&quot;A and S to aim the cannon&#x0D;&#x0A;Press Space to Fire Cannon&quot;</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="191006133507710" type="Tutorial1">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-13" name="Set time scale" sid="506943655215844" type="System">
+                                            <param id="0" name="Time scale">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="106085769342744" type="System">
+                                            <param id="0" name="Variable">OnTutorial</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="431357280732656">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="242602435003927" type="Keyboard">
+                                            <param id="0" name="Key">32 (Space)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="553610131584276" type="System">
+                                            <param id="0" name="Variable">OnTutorial</param>
+                                            <param id="1" name="Value">3</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="278690104816574" type="Tutorial1">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-13" name="Set time scale" sid="811455249886061" type="System">
+                                            <param id="0" name="Time scale">1</param>
+                                        </action>
+                                        <action id="-41" name="Wait for signal" sid="438488774035756" type="System">
+                                            <param id="0" name="Tag">&quot;TutorialPass&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="455878533090571" type="System">
+                                            <param id="0" name="Seconds">2</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="388008079977745" type="Tutorial1">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="506616164986976" type="Tutorial1">
+                                            <param id="0" name="Text">&quot;Cannon must be reloaded after every shot.&#x0D;&#x0A;You can swap out for a new ammo with &apos;Q&apos;and &apos;E&apos;&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="478131439131606" type="System">
+                                            <param id="0" name="Seconds">3.5</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="486435474999562" type="Tutorial1">
+                                            <param id="0" name="Text">&quot;You should have learned all the basics right now&#x0D;&#x0A;and  we&apos;re apporaching the enemy so be ready.&#x0D;&#x0A;Survive through them for 2 miniutes 30 seconds&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="426240079304847" type="System">
+                                            <param id="0" name="Seconds">5</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="987587368709792" type="Tutorial1">
+                                            <param id="0" name="Text">&quot;Let&apos;s go&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="714032230118083" type="System">
+                                            <param id="0" name="Seconds">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="693363821544269" type="Tutorial1">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="638314323538843" type="System">
+                                            <param id="0" name="Variable">OnTutorial</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="549634586057996" type="System">
+                                            <param id="0" name="Variable">OnWave</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="720312570884415" title="Health2">
+                    <sub-events>
+                        <event-block sid="792920759283299">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="190787839825170" type="System">
+                                    <param id="0" name="Interval (seconds)">1.0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="863307280174326" type="TankAndParts">
+                                    <param id="0" name="Instance variable">RegenCountdown</param>
+                                    <param id="1" name="Value">clamp(TankAndParts.RegenCountdown-1, 0, 3)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="186616393451600">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="924164994546297" type="TankAndParts">
+                                    <param id="0" name="Instance variable">RegenCountdown</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="467515415267421" type="TankAndParts">
+                                    <param id="0" name="Instance variable">Armor</param>
+                                    <param id="1" name="Value">clamp(TankAndParts.Armor+1,0,3)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="895092076224242" type="System">
+                                    <param id="0" name="Seconds">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="213075322012386" type="TankAndParts">
+                                    <param id="0" name="Instance variable">RegenCountdown</param>
+                                    <param id="1" name="Value">3+1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="943290463680786">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="848691443756068" type="TankAndParts">
+                                    <param id="0" name="Instance variable">Armor</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="806499900885814" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsRepairing</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="369962805352603" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsRepairing</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="276140793772078">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="439311604726643" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsRepairing</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="742119317845845" type="Armor">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="229471683439609" type="Repairing">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="2" name="Stop" sid="447031548723729" type="FlamethrowerBody" />
+                                <action id="-1" name="Set X" sid="385687120630649" type="FlamethrowerBody">
+                                    <param id="0" name="X">FlamethrowerBody.X</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="595996103712140" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="226838068809159" type="TankAndParts">
+                                    <param id="0" name="Instance variable">Armor</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="849673182230195" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsRepairing</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="892931841994557" type="Repairing">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="239728116169662" type="Armor">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="487766374825907" title="Sprint2">
+                    <sub-events>
+                        <event-block sid="281969015964160">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="429961881418866" type="Keyboard">
+                                    <param id="0" name="Key">16 (Shift)</param>
+                                </condition>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="692493054656150" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsRepairing</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="594755742597949" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsSprint</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="849638318098732">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="155852932522772" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsSprint</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="808484258858193" type="TankAndParts">
+                                    <param id="0" name="Instance variable">EngineCooldown</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="774146796312215" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsRepairing</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Set speed" sid="438363704727192" type="FlamethrowerBody">
+                                    <param id="0" name="Speed">18</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="635874391817149" type="TankAndParts">
+                                    <param id="0" name="Instance variable">Fuel</param>
+                                    <param id="1" name="Value">clamp(TankAndParts.Fuel -1 , -1, 100) </param>
+                                </action>
+                                <action id="-1" name="Set X" sid="832122620932972" type="TankAndParts">
+                                    <param id="0" name="X">clamp(TankAndParts.X+5,137,350)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="836352091452346">
+                            <conditions>
+                                <condition id="2" inverted="1" name="Key is down" sid="856805912089997" type="Keyboard">
+                                    <param id="0" name="Key">16 (Shift)</param>
+                                </condition>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="852478564181977" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsRepairing</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="204877653188067" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsSprint</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="769617146193593">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="427522438484635" type="TankAndParts">
+                                    <param id="0" name="Instance variable">Fuel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="645522956399157" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsSprint</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="395817027637645" type="TankAndParts">
+                                    <param id="0" name="Instance variable">EngineCooldown</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="101929733515802" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="606177723272480" type="TankAndParts">
+                                    <param id="0" name="Instance variable">EngineCooldown</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="530665802323627">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="431577695829581" type="TankAndParts">
+                                    <param id="0" name="Instance variable">EngineCooldown</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="601391147948767" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsSprint</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="805131079128234">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="811811235299705" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsSprint</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">-1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="614497283300125" type="TankAndParts">
+                                    <param id="0" name="Instance variable">Fuel</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="437165047344857" type="TankAndParts">
+                                    <param id="0" name="Instance variable">Fuel</param>
+                                    <param id="1" name="Value">clamp(TankAndParts.Fuel +1 , 0, 100) </param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="405701146382052">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="982922836537979" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsSprint</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">-1</param>
+                                </condition>
+                                <condition id="-1" name="Compare X" sid="717946435403646" type="FlamethrowerBody">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="X co-ordinate">137</param>
+                                </condition>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="769768617473356" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsRepairing</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="417299890810973" type="TankAndParts">
+                                    <param id="0" name="X">TankAndParts.X-3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="784775079844897" title="Machine Gun2">
+                    <sub-events>
+                        <comment>Machine Gun Control</comment>
+                        <event-block sid="878682354895089">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="174589989521346" type="System" />
+                                <condition id="-13" inverted="1" name="Is between angles" sid="945362348193080" type="TankMachinegun">
+                                    <param id="0" name="First angle">16</param>
+                                    <param id="1" name="Second angle">299</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-22" name="Set angle toward position" sid="950488186943620" type="TankMachinegun">
+                                    <param id="0" name="X">Mouse.X</param>
+                                    <param id="1" name="Y">Mouse.Y</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="626029138250754" type="TankAndParts">
+                                    <param id="0" name="Instance variable">Heat</param>
+                                    <param id="1" name="Value">clamp(TankAndParts.Heat, 0, 100)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="378307181658009">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="337375655968251" type="TankMachinegun">
+                                    <param id="0" name="First angle">16</param>
+                                    <param id="1" name="Second angle">180</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="189830155855451" type="TankMachinegun">
+                                    <param id="0" name="Angle">15</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="568582818140114">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="463321511116225" type="System">
+                                    <param id="0" name="First value">TankMachinegun.Angle</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">300</param>
+                                </condition>
+                                <condition id="-13" name="Is between angles" sid="763745664116247" type="TankMachinegun">
+                                    <param id="0" name="First angle">180</param>
+                                    <param id="1" name="Second angle">299</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="430576010590664" type="TankMachinegun">
+                                    <param id="0" name="Angle">300</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="881840922746421">
+                            <conditions>
+                                <condition id="2" name="Mouse button is down" sid="916815697227852" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="756737792957240" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsFiringMG</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="403270948989981" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsFiringMG</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="144908890371970" type="TankMachinegun">
+                                    <param id="0" name="Object">Bullet</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="571265505476334" type="Audio">
+                                    <param id="0" name="Audio file">Machine Gun 1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="749977243154320" type="TankMachinegun">
+                                    <param id="0" name="Object">MGMuzzle</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="736341811431932" type="System">
+                                    <param id="0" name="Seconds">0.25</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="999122367450945" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsFiringMG</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Secondary Fire</comment>
+                        <event-block sid="436607505798693">
+                            <conditions>
+                                <condition id="2" name="Mouse button is down" sid="396941154377212" type="Mouse">
+                                    <param id="0" name="Mouse button">2</param>
+                                </condition>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="671435717970083" type="TankAndParts">
+                                    <param id="0" name="Instance variable">Heat</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">100</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="138084859642518" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsFiringMG</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="374375170177107" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsFiringMG</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="496726044238569" type="TankMachinegun">
+                                    <param id="0" name="Object">Bullet</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="779334453454143" type="Audio">
+                                    <param id="0" name="Audio file">Machine Gun 1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-18" name="Rotate clockwise" sid="233286242652195" type="Bullet">
+                                    <param id="0" name="Degrees">random(-2,2)</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="439116682782914" type="TankAndParts">
+                                    <param id="0" name="Instance variable">Heat</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="943898846104935" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="290227335303469" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsFiringMG</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="697342725250288">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="352386371583716" type="TankAndParts">
+                                    <param id="0" name="Instance variable">Heat</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="299661079223886" type="Audio">
+                                    <param id="0" name="Audio file">MachineGunOverheat</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="373593042237827">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="718555755273057" type="TankAndParts">
+                                    <param id="0" name="Instance variable">Heat</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="672664418735835" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsFiringMG</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="761368553439262" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsCoolingDown</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="656519485964311" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="184148222029965" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsCoolingDown</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="252131878726851">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="775098221680663" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsCoolingDown</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-1" name="Every tick" sid="878811166010497" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="583678951684315" type="TankAndParts">
+                                    <param id="0" name="Instance variable">Heat</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="592595960996770">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="378421040438196" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsFiringMG</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="360888691426347" type="TankAndParts">
+                                    <param id="0" name="Instance variable">Heat</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="147401414341460" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsCoolingDown</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="977561252787683" title="Cannon2">
+                    <sub-events>
+                        <comment>Cannon Movement</comment>
+                        <event-block sid="348066701925098">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="707489459751430" type="Keyboard">
+                                    <param id="0" name="Key">65 (A)</param>
+                                </condition>
+                                <condition id="-13" inverted="1" name="Is between angles" sid="859237411231659" type="FlamthrowerCannon">
+                                    <param id="0" name="First angle">4</param>
+                                    <param id="1" name="Second angle">320</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-19" name="Rotate counter-clockwise" sid="332186181809480" type="FlamthrowerCannon">
+                                    <param id="0" name="Degrees">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="589258120195776">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="481120095957193" type="Keyboard">
+                                    <param id="0" name="Key">83 (S)</param>
+                                </condition>
+                                <condition id="-13" inverted="1" name="Is between angles" sid="250939695430343" type="FlamthrowerCannon">
+                                    <param id="0" name="First angle">3</param>
+                                    <param id="1" name="Second angle">319</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-18" name="Rotate clockwise" sid="467746042803894" type="FlamthrowerCannon">
+                                    <param id="0" name="Degrees">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Ammo Selection</comment>
+                        <event-block sid="980517098752950">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="317530750920453" type="Keyboard">
+                                    <param id="0" name="Key">69 (E)</param>
+                                </condition>
+                                <condition id="-21" name="Is between values" sid="574061843214223" type="System">
+                                    <param id="0" name="Value">TankCannon.CurrentAmmo</param>
+                                    <param id="1" name="Lower bound">0</param>
+                                    <param id="2" name="Upper bound">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="272245948669772" type="FlamthrowerCannon">
+                                    <param id="0" name="Instance variable">CurrentAmmo</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="975304254151379" type="TankAndParts">
+                                    <param id="0" name="Instance variable">CannonLoaded</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="895345556578603" type="TankAndParts">
+                                    <param id="0" name="Instance variable">CannonReloadTime</param>
+                                    <param id="1" name="Value">1.2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="303068889026722">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="628894961462599" type="Keyboard">
+                                    <param id="0" name="Key">81 (Q)</param>
+                                </condition>
+                                <condition id="-21" name="Is between values" sid="840213389792683" type="System">
+                                    <param id="0" name="Value">TankCannon.CurrentAmmo</param>
+                                    <param id="1" name="Lower bound">1</param>
+                                    <param id="2" name="Upper bound">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="623218810009109" type="FlamthrowerCannon">
+                                    <param id="0" name="Instance variable">CurrentAmmo</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="763380301555079" type="TankAndParts">
+                                    <param id="0" name="Instance variable">CannonLoaded</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="746733617365120" type="TankAndParts">
+                                    <param id="0" name="Instance variable">CannonReloadTime</param>
+                                    <param id="1" name="Value">1.2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="520313898563158">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="322741042343660" type="TankAndParts">
+                                    <param id="0" name="Instance variable">CannonLoaded</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="400417120180496" type="CannonLoaded">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="447243289004330">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="943203813008538" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="870986990326176" type="CannonLoaded">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Cannon has reloading state and cannot fire when reloading.  Adjust the bullet angle by a random amount (-4 to +4 degrees) to add some inaccuracy to the firing.</comment>
+                        <event-block sid="319971749742928">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="339680313476084" type="TankAndParts">
+                                    <param id="0" name="Instance variable">CannonLoaded</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="522581232337608" type="TankAndParts">
+                                    <param id="0" name="Instance variable">CannonReloading</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="330087217768421" type="TankAndParts">
+                                    <param id="0" name="Instance variable">CannonReloading</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="520656548917700" type="System">
+                                    <param id="0" name="Seconds">TankAndParts.CannonReloadTime-1.2</param>
+                                </action>
+                                <action id="7" name="Play (by name)" sid="567115367723735" type="Audio">
+                                    <param id="0" name="Folder">0</param>
+                                    <param id="1" name="Audio file name">&quot;CannonReload&quot;</param>
+                                    <param id="3" name="Loop">0</param>
+                                    <param id="4" name="Volume">30</param>
+                                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="251248197803123" type="System">
+                                    <param id="0" name="Seconds">1.2</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="945797583078881" type="TankAndParts">
+                                    <param id="0" name="Instance variable">CannonLoaded</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="604798604780353" type="TankAndParts">
+                                    <param id="0" name="Instance variable">CannonReloading</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-group description="" sid="831367664987311" title="Ammo Type Reload Time2">
+                            <sub-events>
+                                <event-block sid="943943993387406">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="503233136670419" type="FlamthrowerCannon">
+                                            <param id="0" name="Instance variable">CurrentAmmo</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                </event-block>
+                                <event-block sid="845679049967253">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="299793795664156" type="FlamthrowerCannon">
+                                            <param id="0" name="Instance variable">CurrentAmmo</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                </event-block>
+                                <event-block sid="893064766605780">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="463540485724005" type="FlamthrowerCannon">
+                                            <param id="0" name="Instance variable">CurrentAmmo</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                </event-block>
+                                <event-block sid="894929683035135">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="223490043272653" type="FlamthrowerCannon">
+                                            <param id="0" name="Instance variable">CurrentAmmo</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-block sid="110904773989199">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="611737550798234" type="Keyboard">
+                                    <param id="0" name="Key">32 (Space)</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="473288001595614" type="TankAndParts">
+                                    <param id="0" name="Instance variable">CannonLoaded</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="853171978281432" type="Audio">
+                                    <param id="0" name="Audio file">CannonFire</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">3</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="399037086494319" type="TankAndParts">
+                                    <param id="0" name="Instance variable">CannonLoaded</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="968326721874455" type="TankAndParts">
+                                    <param id="0" name="Instance variable">CannonReloadTime</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="240536457799981">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="485166177571262" type="FlamthrowerCannon">
+                                            <param id="0" name="Instance variable">CurrentAmmo</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="576409498615865" type="FlamthrowerCannon">
+                                            <param id="0" name="Object">CannonBall</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="Image point">&quot;ShootPoint&quot;</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="840272213333824" type="FlamthrowerCannon">
+                                            <param id="0" name="Object">CannonMuzzle</param>
+                                            <param id="1" name="Layer">1</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                        <action id="-18" name="Rotate clockwise" sid="112125237198176" type="CannonBall">
+                                            <param id="0" name="Degrees">random(-4, 4)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="792316484935077">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="701509599527752" type="FlamthrowerCannon">
+                                            <param id="0" name="Instance variable">CurrentAmmo</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="142104019567995" type="FlamthrowerCannon">
+                                            <param id="0" name="Object">Buckshot</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="621443852403432" type="TankAndParts">
+                                            <param id="0" name="Instance variable">CannonReloadTime</param>
+                                            <param id="1" name="Value">1.3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="590854947243202">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="833439284795271" type="FlamthrowerCannon">
+                                            <param id="0" name="Instance variable">CurrentAmmo</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="701229887668783" type="FlamthrowerCannon">
+                                            <param id="0" name="Object">Slug</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                        <action id="-18" name="Rotate clockwise" sid="287259807680577" type="Slug">
+                                            <param id="0" name="Degrees">random(-4,4)</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="539503440818705" type="FlamthrowerCannon">
+                                            <param id="0" name="Object">CannonMuzzle</param>
+                                            <param id="1" name="Layer">1</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="835489356816966" type="TankAndParts">
+                                            <param id="0" name="Instance variable">CannonReloadTime</param>
+                                            <param id="1" name="Value">1.5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="720493254169375">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="150955509759068" type="FlamthrowerCannon">
+                                            <param id="0" name="Instance variable">CurrentAmmo</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="398857045306941" type="FlamthrowerCannon">
+                                            <param id="0" name="Object">HERound</param>
+                                            <param id="1" name="Layer">1</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                        <action id="-18" name="Rotate clockwise" sid="819935843181466" type="HERound">
+                                            <param id="0" name="Degrees">random(-7,7)</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="853889287709049" type="FlamthrowerCannon">
+                                            <param id="0" name="Object">CannonMuzzle</param>
+                                            <param id="1" name="Layer">1</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="583838243726287" type="TankAndParts">
+                                            <param id="0" name="Instance variable">CannonReloadTime</param>
+                                            <param id="1" name="Value">2.5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="426172774664655">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="607585984636576" type="HERound">
+                                    <param id="0" name="Object">Enemies</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="885681251604259" type="HERound">
+                                    <param id="0" name="Object">Sprite6</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="852175724503070" type="HERound" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="109866836089766" title="Game Over2">
+                    <sub-events>
+                        <event-block sid="506932031987532">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="414625420894899" type="TankAndParts">
+                                    <param id="0" name="Object">Enemies</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="211966419978673" type="TankAndParts">
+                                    <param id="0" name="Instance variable">IsRepairing</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="862852092812147" type="TankAndParts">
+                                    <param id="0" name="Instance variable">LastHealth</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="546860155659082">
+                                    <conditions>
+                                        <condition id="-16" name="Is on layer" sid="639888662464849" type="Enemies">
+                                            <param id="0" name="Layer">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="364636283091973" type="Enemies" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="358775779442185">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="259022094873068" type="TankAndParts">
+                                    <param id="0" name="Instance variable">LastHealth</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="336589191841936" type="GameOver">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="8" name="Set silent" sid="770494881786630" type="Audio">
+                                    <param id="0" name="Mode">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="255385020080761" type="Enemies" />
+                                <action id="-9" name="Destroy" sid="467488077351113" type="Projectiles" />
+                                <action id="-9" name="Destroy" sid="619207265874449" type="CannonMuzzle" />
+                                <action id="-9" name="Destroy" sid="343350402190115" type="MGHit" />
+                                <action id="-9" name="Destroy" sid="889965370287007" type="MGMuzzle" />
+                                <action id="-9" name="Destroy" sid="155916204397060" type="TankAndParts" />
+                                <action id="-13" name="Set time scale" sid="654474063220829" type="System">
+                                    <param id="0" name="Time scale">0</param>
+                                </action>
+                                <action id="2" name="Set visible" sid="589833442762268" type="Restart1">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <include>Event sheet Stage 1</include>
+        <comment>Make New Event Sheet for Tank control only and for other stage layout, copy using &quot;Include Sheet&quot;</comment>
+    </events>
+</c2eventsheet>
