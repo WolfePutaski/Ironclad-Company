@@ -230,6 +230,10 @@
                         <IsRepairing>0</IsRepairing>
                         <IsRegen>0</IsRegen>
                         <RegenCountdown>0</RegenCountdown>
+                        <MGOverheat>0</MGOverheat>
+                        <MaximumArmor>3</MaximumArmor>
+                        <Toolbox>0</Toolbox>
+                        <RepairCountdown>0</RepairCountdown>
                         <CurrentAmmo>0</CurrentAmmo>
                     </instance-variables>
                     <behavior-instances>
@@ -321,6 +325,10 @@
                         <IsRepairing>0</IsRepairing>
                         <IsRegen>0</IsRegen>
                         <RegenCountdown>0</RegenCountdown>
+                        <MGOverheat>0</MGOverheat>
+                        <MaximumArmor>3</MaximumArmor>
+                        <Toolbox>0</Toolbox>
+                        <RepairCountdown>0</RepairCountdown>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Flash" />
@@ -385,6 +393,10 @@
                         <IsRepairing>0</IsRepairing>
                         <IsRegen>0</IsRegen>
                         <RegenCountdown>0</RegenCountdown>
+                        <MGOverheat>0</MGOverheat>
+                        <MaximumArmor>3</MaximumArmor>
+                        <Toolbox>0</Toolbox>
+                        <RepairCountdown>0</RepairCountdown>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Flash" />
@@ -948,28 +960,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="AmmoIcon" uid="52">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>58.589447021</x>
-                        <y>189.43901062</y>
-                        <z>0</z>
-                        <width>239.607299805</width>
-                        <height>62.168388367</height>
-                        <depth>0</depth>
-                        <hotspotX>0.1027027</hotspotX>
-                        <hotspotY>0.479166657</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
             </instances>
             <effects />
         </layer>
@@ -1399,7 +1389,7 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="Heat" uid="42">
+                <instance type="HeatDebug" uid="42">
                     <properties>
                         <text>Heat</text>
                         <initial-visibility>Invisible</initial-visibility>
@@ -1526,11 +1516,11 @@
                         <x>34</x>
                         <y>99.467453003</y>
                         <z>0</z>
-                        <width>126.305435181</width>
-                        <height>36.959857941</height>
+                        <width>216.122619629</width>
+                        <height>39.599845886</height>
                         <depth>0</depth>
-                        <hotspotX>0.011111111</hotspotX>
-                        <hotspotY>0.035714287</hotspotY>
+                        <hotspotX>0.006493506</hotspotX>
+                        <hotspotY>0.033333335</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

@@ -1054,7 +1054,7 @@
                         <action id="0" name="Set text" sid="974106880481310" type="Health">
                             <param id="0" name="Text">&quot;Current Health: &quot;&amp;TankAndParts.LastHealth</param>
                         </action>
-                        <action id="0" name="Set text" sid="216265849832446" type="Heat">
+                        <action id="0" name="Set text" sid="216265849832446" type="HeatDebug">
                             <param id="0" name="Text">&quot;Heat : &quot;&amp;TankAndParts.Heat</param>
                         </action>
                         <action id="0" name="Set text" sid="156275388227002" type="Engine">

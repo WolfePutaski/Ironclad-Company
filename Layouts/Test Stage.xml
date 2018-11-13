@@ -87,8 +87,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-261</x>
-                        <y>64</y>
+                        <x>-277.644561768</x>
+                        <y>62.612869263</y>
                         <z>0</z>
                         <width>268</width>
                         <height>98</height>
@@ -186,6 +186,10 @@
                         <IsRepairing>0</IsRepairing>
                         <IsRegen>0</IsRegen>
                         <RegenCountdown>0</RegenCountdown>
+                        <MGOverheat>0</MGOverheat>
+                        <MaximumArmor>3</MaximumArmor>
+                        <Toolbox>0</Toolbox>
+                        <RepairCountdown>0</RepairCountdown>
                         <CurrentAmmo>0</CurrentAmmo>
                     </instance-variables>
                     <behavior-instances>
@@ -277,6 +281,10 @@
                         <IsRepairing>0</IsRepairing>
                         <IsRegen>0</IsRegen>
                         <RegenCountdown>0</RegenCountdown>
+                        <MGOverheat>0</MGOverheat>
+                        <MaximumArmor>3</MaximumArmor>
+                        <Toolbox>0</Toolbox>
+                        <RepairCountdown>0</RepairCountdown>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Flash" />
@@ -341,6 +349,10 @@
                         <IsRepairing>0</IsRepairing>
                         <IsRegen>0</IsRegen>
                         <RegenCountdown>0</RegenCountdown>
+                        <MGOverheat>0</MGOverheat>
+                        <MaximumArmor>3</MaximumArmor>
+                        <Toolbox>0</Toolbox>
+                        <RepairCountdown>0</RepairCountdown>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Flash" />
@@ -757,8 +769,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>33.752029419</x>
-                        <y>64.111251831</y>
+                        <x>31.234664917</x>
+                        <y>103.552871704</y>
                         <z>0</z>
                         <width>200</width>
                         <height>30</height>
@@ -904,46 +916,56 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="AmmoIcon" uid="127">
+                <instance type="Toolbox" uid="52">
                     <properties>
+                        <text>X </text>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <font>ArcadeClassic,-24,400,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>58.589447021</x>
-                        <y>189.43901062</y>
+                        <x>229.594070435</x>
+                        <y>65.109352112</y>
                         <z>0</z>
-                        <width>239.607299805</width>
-                        <height>62.168388367</height>
+                        <width>215</width>
+                        <height>34</height>
                         <depth>0</depth>
-                        <hotspotX>0.1027027</hotspotX>
-                        <hotspotY>0.479166657</hotspotY>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="HeatBar" uid="54">
+                <instance type="TimeCount" uid="59">
                     <properties>
+                        <text>Time</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <font>ArcadeClassic,-24,400,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>83.363059998</x>
-                        <y>441.754394531</y>
+                        <x>31.436416626</x>
+                        <y>29.560394287</y>
                         <z>0</z>
-                        <width>100</width>
-                        <height>10</height>
+                        <width>200</width>
+                        <height>30</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -970,7 +992,7 @@
                 <instance type="AmmoDisplay" uid="129">
                     <properties>
                         <text>Current Ammo Type: </text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>ArcadeClassic,-24,400,0</font>
                         <color>255,0,204</color>
                         <horizontal-alignment>Left</horizontal-alignment>
@@ -982,8 +1004,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>36</x>
-                        <y>33</y>
+                        <x>724</x>
+                        <y>116</y>
                         <z>0</z>
                         <width>403</width>
                         <height>30</height>
@@ -1138,6 +1160,44 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Reloaded" uid="55">
+                    <properties>
+                        <text>Ready</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>ArcadeClassic,-24,400,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>1</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>31.026199341</x>
+                        <y>255.307983398</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="CannonLoaded" uid="138">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -1148,8 +1208,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>310.067474365</x>
-                        <y>186.359771729</y>
+                        <x>119.026199341</x>
+                        <y>268.307983398</y>
                         <z>0</z>
                         <width>18.973665237</width>
                         <height>18.973667145</height>
@@ -1289,7 +1349,7 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="Heat" uid="158">
+                <instance type="HeatDebug" uid="158">
                     <properties>
                         <text>Heat</text>
                         <initial-visibility>Invisible</initial-visibility>
@@ -1403,6 +1463,55 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="HeatBar" uid="54">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>60.467014313</x>
+                        <y>441.754394531</y>
+                        <z>0</z>
+                        <width>100</width>
+                        <height>10</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Heat2" uid="57">
+                    <properties>
+                        <text>Heat</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>ArcadeClassic,-24,400,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>172.51411438</x>
+                        <y>429.826293945</y>
+                        <z>0</z>
+                        <width>73.778564453</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="ArmorIcon" uid="162">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -1416,11 +1525,55 @@
                         <x>34</x>
                         <y>99.467453003</y>
                         <z>0</z>
-                        <width>126.305435181</width>
-                        <height>36.959857941</height>
+                        <width>216.122619629</width>
+                        <height>39.599845886</height>
                         <depth>0</depth>
-                        <hotspotX>0.011111111</hotspotX>
-                        <hotspotY>0.035714287</hotspotY>
+                        <hotspotX>0.006493506</hotspotX>
+                        <hotspotY>0.033333335</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="AmmoIcon" uid="56">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>168.815170288</x>
+                        <y>197.808166504</y>
+                        <z>0</z>
+                        <width>303.319976807</width>
+                        <height>118.389831543</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ToolboxIcon" uid="58">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>200.797851563</x>
+                        <y>85.567092896</y>
+                        <z>0</z>
+                        <width>51.553703308</width>
+                        <height>29.294403076</height>
+                        <depth>0</depth>
+                        <hotspotX>0.613636374</hotspotX>
+                        <hotspotY>0.819672108</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1435,7 +1588,7 @@
             <effect id="pixellate" />
             <effect-instance type="Pixellate">
                 <parameters>
-                    <size>3</size>
+                    <size>1</size>
                 </parameters>
             </effect-instance>
         </effect-type>

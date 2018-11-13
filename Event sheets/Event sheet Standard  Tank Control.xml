@@ -643,6 +643,16 @@
                             </actions>
                         </event-block>
                         <comment>Ammo Selection</comment>
+                        <event-block sid="728563444471272">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="987782773162887" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="324504330629840" type="AmmoIcon">
+                                    <param id="0" name="Frame number">TankCannon.CurrentAmmo</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="832832226094933">
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="574156052014410" type="Keyboard">

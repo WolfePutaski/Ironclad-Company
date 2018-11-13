@@ -16,6 +16,7 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
@@ -446,12 +447,15 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Heat2" sid="634986360768413">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder name="Debug">
             <object-type name="AmmoDisplay" sid="920443705519713">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="Heat" sid="341281403282655">
+            <object-type name="HeatDebug" sid="341281403282655">
                 <plugin id="Text" />
             </object-type>
             <object-type name="OverHeat" sid="296603954741320">
@@ -522,7 +526,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="570197119612873" speed="5">
-                        <frame duration="1" hotspotX="0.0111111" hotspotY="0.0357143" />
+                        <frame duration="1" hotspotX="0.00649351" hotspotY="0.0333333" />
                         <frame duration="1" hotspotX="0.0384615" hotspotY="0.0333333">
                             <collision-poly>
                                 <point x="0.119087" y="0.180593" />
@@ -586,61 +590,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="AmmoIcon" sid="124154052057421">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="232676858111099" speed="5">
-                        <frame duration="1" hotspotX="0.102703" hotspotY="0.479167" original-source="D:\IDD\Game Projects\Material\Art\Tank\Grapeshot_cannon_icon.png">
-                            <collision-poly>
-                                <point x="0.00135135" y="0.0885417" />
-                                <point x="0.102703" y="0.00520833" />
-                                <point x="0.202703" y="0.09375" />
-                                <point x="0.202703" y="0.479167" />
-                                <point x="0.187838" y="0.807292" />
-                                <point x="0.102703" y="0.994792" />
-                                <point x="0.0175676" y="0.807292" />
-                                <point x="0.00135135" y="0.479167" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.102703" hotspotY="0.479167">
-                            <collision-poly>
-                                <point x="0.00135135" y="0.0885417" />
-                                <point x="0.102703" y="0.00520833" />
-                                <point x="0.202703" y="0.09375" />
-                                <point x="0.202703" y="0.479167" />
-                                <point x="0.187838" y="0.807292" />
-                                <point x="0.102703" y="0.994792" />
-                                <point x="0.0175676" y="0.807292" />
-                                <point x="0.00135135" y="0.479167" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.102703" hotspotY="0.479167">
-                            <collision-poly>
-                                <point x="0.00135135" y="0.0885417" />
-                                <point x="0.102703" y="0.00520833" />
-                                <point x="0.202703" y="0.09375" />
-                                <point x="0.202703" y="0.479167" />
-                                <point x="0.187838" y="0.807292" />
-                                <point x="0.102703" y="0.994792" />
-                                <point x="0.0175676" y="0.807292" />
-                                <point x="0.00135135" y="0.479167" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.102703" hotspotY="0.479167">
-                            <collision-poly>
-                                <point x="0.00135135" y="0.0885417" />
-                                <point x="0.102703" y="0.00520833" />
-                                <point x="0.202703" y="0.09375" />
-                                <point x="0.202703" y="0.479167" />
-                                <point x="0.187838" y="0.807292" />
-                                <point x="0.102703" y="0.994792" />
-                                <point x="0.0175676" y="0.807292" />
-                                <point x="0.00135135" y="0.479167" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="HeatBar" sid="758382974443154">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -665,6 +614,17 @@
                                 <point x="0" y="0.480001" />
                             </collision-poly>
                         </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="AmmoIcon" sid="364569319397949">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="854046423704979" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1204,6 +1164,32 @@
         <object-type name="ProgressBar2" sid="669301812015538">
             <plugin id="progressbar" />
         </object-type>
+        <object-type name="Reloaded" sid="395785001609360">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Fade" sid="261674919062553">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="Toolbox" sid="912818126922533">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="ToolboxIcon" sid="590318995889382">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="424932352652863" speed="5">
+                    <frame duration="1" hotspotX="0.613636" hotspotY="0.819672" original-source="D:\IDD\Game Projects\Material\Art\Tank\Toolbox.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TimeCount" sid="611409553126856">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="SpriteFont" sid="150059192854857">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
     </object-folder>
     <families>
         <family name="TankAndParts" plugin-id="Sprite" sid="377492637423480">
@@ -1231,6 +1217,10 @@
                 <instance-variable name="IsRepairing" sid="523798849442703" type="number" />
                 <instance-variable comment="0 = False 1 = True 2 = Checked" name="IsRegen" sid="690171766143986" type="number" />
                 <instance-variable name="RegenCountdown" sid="689670438082632" type="number" />
+                <instance-variable comment="1 = Overheat Delay" name="MGOverheat" sid="223634170843979" type="number" />
+                <instance-variable comment="3 = Default 5 = Heavy" name="MaximumArmor" sid="601451771691963" type="number" />
+                <instance-variable comment="Used to Instant Repair Max 3" name="Toolbox" sid="257061743339196" type="number" />
+                <instance-variable comment="Countdown for Repair" name="RepairCountdown" sid="469414587465875" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Flash" sid="446464482417266">
@@ -1284,7 +1274,7 @@
             <members>
                 <member>CannonIsLoading</member>
                 <member>Engine</member>
-                <member>Heat</member>
+                <member>HeatDebug</member>
                 <member>IsSprint</member>
                 <member>OverHeat</member>
                 <member>TimeToReload</member>
